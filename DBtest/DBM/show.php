@@ -3,9 +3,16 @@
   $user = "LAA0737712";
   $pass = "Aodai7010";
   $db = "LAA0737712-aodaisimu";
+  $name;
   $friction;
+  $restitution;
   $i;
 
+
+  $test=[];
+  $test[0]="aaa";
+  $test[1]="bbb";
+  $jsonTest=json_encode($test);
   // MySQLへ接続する
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
 
@@ -22,6 +29,15 @@
   $rows = mysql_num_rows($result);
   $rows2 = mysql_num_rows($result2);
 
+function quote_smart($value)
+{
+    // 数値以外をクオートする
+    if (!is_numeric($value)) {
+        $value = '"' . mysql_real_escape_string($value) . '"';
+    }
+    return $value;
+}
+
   //表示するデータを作成
   if($rows){
     $i=0;
@@ -29,9 +45,15 @@
       $tempHtml .= "<tr>";
       $tempHtml .= "<td>".$row["id"]."</td><td>".$row["friction"]."</td><td>".$row["restitution"]."</td><td>".$row["name"]."</td>";
       $tempHtml .= "</tr>\n";
+      $name[$i]=$row["name"];
+      echo $name[$i];
       $friction[$i]=$row["friction"];
+      $restitution[$i]=$row["restitution"];
       $i++;
     }
+    $jsonName=json_encode($name);
+    $jsonFriction=json_encode($friction);
+    $jsonRestitution=json_encode($restitution);
     $msg = $rows."件のデータがあります。";
     $chunk = $rows;
   }else{
@@ -78,9 +100,10 @@
     </table>
 
 <script type="text/javascript">var rows = "<?= $rows ?>";</script>
-<script type="text/javascript">
-	data-array ='<?php echo json_safe_encode($friction); ?>';
-
+<script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>
+<script type="text/javascript">var test=[];
+    test[0] = JSON.stringify('<?php echo  $jsonName[0]; ?>');
+    test[1] = JSON.stringify('<?php echo  $jsonName[1]; ?>');
 </script>
 <script type="text/javascript" src="script.js"></script>
 
