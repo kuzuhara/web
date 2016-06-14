@@ -1,0 +1,8 @@
+{
+  dimension:[
+	{type:"tube",x1:30,x2:-30,y1:0,y2:0,z1:0,z2:-3,rx:0,ry:0,rz:0,mass:0,thickness:3,density:2.3,color:0x32cd32,friction:0.25,restitution:0.3,texture:""},//ê⁄ínñ 
+	{type:"truncated cone_nobase",x1:75,x2:-75,y1:0,y2:0,z1:8,z2:0,rx:0,ry:0,rz:0,mass:300,thickness:3,density:2.3,color:0x32ad32,friction:0.25,restitution:0.3,texture:"",rb:40},//è„ñ 
+	{type:"cylinder",x1:40,x2:-40,y1:0,y2:0,z1:0,z2:0,rx:90,ry:0,rz:0,mass:0,density:2.3,color:0x32cd32,friction:0.25,restitution:0.3,texture:""},//íÍñ 
+]
+  ,posx:0,posy:0,posz:349,rotx:0,roty:0,rotz:0
+}

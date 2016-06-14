@@ -1,0 +1,16 @@
+{
+	startx:900,
+	starty:150,
+	startz:540,
+	friction:0.45,
+	restitution:0.3,
+	direction:2,
+	align:false,
+	individual:[
+		{sx:250,sy:180,sz:40,mass:500,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:230,sy:180,sz:40,mass:350,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:200,sy:180,sz:30,mass:300,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:240,sy:150,sz:30,mass:300,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:240,sy:150,sz:30,mass:250,texture:"",color:0xFFFFFF*Math.random()},
+	]
+}

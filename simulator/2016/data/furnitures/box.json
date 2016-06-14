@@ -1,0 +1,22 @@
+{
+	id:0,
+	friction:1,
+	restitution:1,
+	parts:[
+		//type 		wX wY wZ		x y z 		rX rY rZ	  mass	   density    useMass		color	texture			useTexture			
+		{type:"box", wX:100, wY:200, wZ:300, x:0, y:0, z:0, rX:0, rY:0, rZ:0, mass:10, density:10, useMass:true, color:0x222211, texture:"ceiling.jpg", useTexture:false}
+
+		//		radius		height
+		//{種類:"cylinder", 半径:数値, 高さ:数値, 縦位置:数値, 横位置:数値, 高さ位置:数値, 回転x:数値, 回転y:数値, 回転z:数値, 質量:数値, 比重:数値, 質量使うフラグ:trueかfalse, 色:0xのあとに6桁, テクスチャ:"文字列", テクスチャ使うフラグ:trueかfalse},
+		//球
+		//{種類:"sphere", 半径:数値, 縦位置:数値, 横位置:数値, 高さ位置:数値, 質量:数値, 比重:数値, 質量使うフラグ:trueかfalse, 色:0xのあとに6桁, テクスチャ:"文字列", テクスチャ使うフラグ:trueかfalse},
+		//パイプ	innerRadius outerRadius
+		//{種類:"pipe", 内径:数値, 外径:数値, 高さ:数値, 縦位置:数値, 横位置:数値, 高さ位置:数値, 回転x:数値, 回転y:数値, 回転z:数値, 質量:数値, 比重:数値, 質量使うフラグ:trueかfalse, 色:0xのあとに6桁, テクスチャ:"文字列", テクスチャ使うフラグ:trueかfalse},
+		//カプセル
+		//{種類:"capsule", 半径:数値, 高さ:数値, 縦位置:数値, 横位置:数値, 高さ位置:数値, 回転x:数値, 回転y:数値, 回転z:数値, 質量:数値, 比重:数値, 質量使うフラグ:trueかfalse, 色:0xのあとに6桁, テクスチャ:"文字列", テクスチャ使うフラグ:trueかfalse},
+		//円錐台		topRadius bottomRadius
+		//{種類:"truncated cone", 内径:数値, 外径:数値, 高さ:数値, 縦位置:数値, 横位置:数値, 高さ位置:数値, 回転x:数値, 回転y:数値, 回転z:数値, 質量:数値, 比重:数値, 質量使うフラグ:trueかfalse, 色:0xのあとに6桁, テクスチャ:"文字列", テクスチャ使うフラグ:trueかfalse},
+	]
+}
+
+

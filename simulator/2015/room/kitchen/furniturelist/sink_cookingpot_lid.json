@@ -1,0 +1,8 @@
+{
+  dimension:[
+	{type:"tube",x1:142.5,x2:-142.5,y1:0,y2:0,z1:0,z2:-3,rx:0,ry:0,rz:0,mass:10,thickness:2.5,density:2.7,color:0x334455,friction:0.15,restitution:0.4,texture:""},//Ç≈Ç¡ÇœÇË
+	{type:"cylinder_v",x1:150+10,x2:-150-10,y1:0,y2:0,z1:0.8,z2:0,rx:0,ry:0,rz:0,thickness:2.5,mass:100,density:2.7,color:0x334455,friction:0.15,restitution:0.4,texture:""},//ñ{ëÃ
+	{type:"cylinder_v",x1:15,x2:-15,y1:0+15,y2:0-15,z1:35,z2:0.8,rx:0,ry:0,rz:0,mass:10,density:1.07,color:0x444444,friction:0.4,restitution:0.384,texture:""},//éùÇ¬èä
+  ],
+  posx:-1000,posy:-745,posz:203,rotx:0,roty:0,rotz:0
+}

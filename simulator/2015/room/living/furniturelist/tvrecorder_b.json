@@ -1,0 +1,6 @@
+{
+  dimension:[
+	{type:"box",x1:115,x2:-115,y1:76,y2:-76,z1:28,z2:0,rx:0,ry:0,rz:0,mass:900,density:0,color:0x333333,friction:0.6,restitution:0.3,texture:""},//Playstation2(”–Œ^)
+  ]
+  ,posx:-1225,posy:1225,posz:55,rotx:0,roty:0,rotz:-135
+}

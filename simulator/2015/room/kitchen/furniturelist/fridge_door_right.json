@@ -1,0 +1,29 @@
+{
+  dimension:[
+	{type:"tube",x1:0+6,x2:0-6,y1:0+385,y2:0-385,z1:385,z2:-385,rx:0,ry:0,rz:0,thickness:1,mass:100,density:7.8,color:0x622030,friction:0.52,restitution:0.3,texture:""},//–_
+	{type:"box",x1:0+10,x2:0,y1:10,y2:305,z1:385,z2:-385,rx:0,ry:0,rz:0,thickness:1,mass:1800,density:7.8,color:0xFFFFFF,friction:0.52,restitution:0.3,texture:"translucent"},//”à
+
+	{type:"box",x1:120,x2:10,y1:270,y2:275,z1:-190,z2:-365,rx:0,ry:0,rz:0,mass:40,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//‘¤–Ê(ƒyƒbƒgƒ{ƒgƒ‹)
+	{type:"box",x1:120,x2:10,y1:20,y2:25,z1:-190,z2:-365,rx:0,ry:0,rz:0,mass:40,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//‘¤–Ê(ƒyƒbƒgƒ{ƒgƒ‹)
+	{type:"box",x1:120,x2:115,y1:20,y2:275,z1:-190,z2:-365,rx:0,ry:0,rz:0,mass:60,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//”w–Ê(ƒyƒbƒgƒ{ƒgƒ‹)
+	{type:"box",x1:115,x2:10,y1:25,y2:270,z1:-345,z2:-365,rx:0,ry:0,rz:0,mass:60,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//’ê–Ê(ƒyƒbƒgƒ{ƒgƒ‹)
+
+	{type:"box",x1:100,x2:10,y1:285,y2:290,z1:30,z2:0,rx:0,ry:0,rz:0,mass:20,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//‘¤–Ê(—‘)
+	{type:"box",x1:100,x2:10,y1:20,y2:25,z1:30,z2:0,rx:0,ry:0,rz:0,mass:20,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//‘¤–Ê(—‘)
+	{type:"box",x1:100,x2:95,y1:20,y2:290,z1:30,z2:0,rx:0,ry:0,rz:0,mass:40,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//”w–Ê(—‘)
+	{type:"box",x1:95,x2:10,y1:25,y2:285,z1:10,z2:0,rx:0,ry:0,rz:0,mass:40,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//’ê–Ê(—‘)
+
+	{type:"box",x1:52.5+4,x2:52.5-4,y1:25,y2:285,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:12+4,x2:12-4,y1:25,y2:285,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:93+4,x2:93-4,y1:25,y2:285,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:91,x2:14,y1:27+4,y2:27-4,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:91,x2:14,y1:69+4,y2:69-4,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:91,x2:14,y1:111+4,y2:111-4,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:91,x2:14,y1:153+4,y2:153-4,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:91,x2:14,y1:195+4,y2:195-4,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:91,x2:14,y1:237+4,y2:237-4,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+	{type:"box",x1:91,x2:14,y1:283+4,y2:283-4,z1:30,z2:10,rx:0,ry:0,rz:0,mass:10,density:7.8,color:0x1C1C1C,friction:0.6,restitution:0.3,texture:""},//—‘Žx‚¦‚é•”•ª
+
+  ]
+  ,posx:685,posy:-154,posz:1423,rotx:0,roty:0,rotz:0
+}

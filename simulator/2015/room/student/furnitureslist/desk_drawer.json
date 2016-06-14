@@ -1,0 +1,11 @@
+{
+  dimension:[
+	{type:"box",x1:235,x2:225,y1:-300,y2:290,z1:97,z2:0,rx:0,ry:0,rz:0,mass:400,density:0.4,color:0xFFaa4C,friction:0.4,restitution:0.384,texture:"usecolor"},
+	{type:"box",x1:-235,x2:-225,y1:-300,y2:290,z1:97,z2:0,rx:0,ry:0,rz:0,mass:400,density:0.4,color:0xFFaa4C,friction:0.4,restitution:0.384,texture:"usecolor"},
+	{type:"box",x1:225,x2:-225,y1:-300,y2:-285,z1:97,z2:0,rx:0,ry:0,rz:0,mass:300,density:0.4,color:0xFFFFFF,friction:0.4,restitution:0.384,texture:"translucent"},//”w–Ê
+	{type:"box",x1:225,x2:-225,y1:-285,y2:290,z1:20,z2:10,rx:0,ry:0,rz:0,mass:500,density:0.4,color:0xFFaa4C,friction:0.4,restitution:0.384,texture:"usecolor"},
+	{type:"box",x1:245,x2:-245,y1:305,y2:290,z1:97,z2:0,rx:0,ry:0,rz:0,mass:500,density:0.4,color:0xFFFFFF,friction:0.4,restitution:0.384,texture:"translucent"},
+ ]
+  ,posx:123,posy:-1125,posz:574,rotx:0,roty:0,rotz:0
+  ,number:2,dx:-500,dy:0,dz:0
+}

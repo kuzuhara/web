@@ -1,0 +1,16 @@
+{//•”‰®‚ÌŠp‚É‚ ‚é‘ä
+  dimension:[
+	{type:"cylinder",x1:220,x2:180,y1:480,y2:-170,z1:-317.5,z2:-317.5,rx:90,ry:0,rz:0,mass:100,density:2.7,color:0x826060,friction:0.15,restitution:0.4,texture:""},//‹r
+	{type:"cylinder",x1:220,x2:180,y1:170,y2:-480,z1:-317.5,z2:-317.5,rx:90,ry:0,rz:0,mass:100,density:2.7,color:0x826060,friction:0.15,restitution:0.4,texture:""},//‹r
+	{type:"cylinder",x1:-220,x2:-180,y1:480,y2:-170,z1:-317.5,z2:-317.5,rx:90,ry:0,rz:0,mass:100,density:2.7,color:0x826060,friction:0.15,restitution:0.4,texture:""},//‹r
+	{type:"cylinder",x1:-220,x2:-180,y1:170,y2:-480,z1:-317.5,z2:-317.5,rx:90,ry:0,rz:0,mass:100,density:2.7,color:0x826060,friction:0.15,restitution:0.4,texture:""},//‹r
+
+	{type:"box",x1:250,x2:-250,y1:200,y2:-200,z1:15+5,z2:0+5,rx:0,ry:0,rz:0,mass:500,density:0.4,color:0x822020,friction:0.4,restitution:0.384,texture:""},//“V”Â
+	{type:"box",x1:180,x2:-180,y1:160,y2:140,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:50,density:2.7,color:0x333333,friction:0.15,restitution:0.4,texture:""},
+	{type:"box",x1:180,x2:-180,y1:-160,y2:-140,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:50,density:2.7,color:0x333333,friction:0.15,restitution:0.4,texture:""},
+	{type:"box",x1:220,x2:180,y1:150,y2:-150,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:50,density:2.7,color:0x333333,friction:0.15,restitution:0.4,texture:""},
+	{type:"box",x1:-220,x2:-180,y1:150,y2:-150,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:50,density:2.7,color:0x333333,friction:0.15,restitution:0.4,texture:""},
+
+  ]
+  ,posx:1520,posy:-1520,posz:533,rotx:0,roty:0,rotz:0
+}

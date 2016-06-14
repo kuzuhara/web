@@ -1,0 +1,32 @@
+{		
+  dimension:[
+	{type:"cylinder",x1:320+25,x2:320-25,y1:-285+15,y2:-285-15,z1:-15,z2:-15,rx:90,ry:0,rz:0,mass:300,density:1.0,color:0x222222,friction:0.6,restitution:0.3,texture:""},//接地面
+	{type:"cylinder",x1:320+25,x2:320-25,y1:285+15,y2:285-15,z1:-15,z2:-15,rx:90,ry:0,rz:0,mass:300,density:1.0,color:0x222222,friction:0.6,restitution:0.3,texture:""},//接地面
+	{type:"cylinder",x1:-320+25,x2:-320-25,y1:-285+15,y2:-285-15,z1:-15,z2:-15,rx:90,ry:0,rz:0,mass:300,density:1.0,color:0x222222,friction:0.6,restitution:0.3,texture:""},//接地面
+	{type:"cylinder",x1:-320+25,x2:-320-25,y1:285+15,y2:285-15,z1:-15,z2:-15,rx:90,ry:0,rz:0,mass:300,density:1.0,color:0x222222,friction:0.6,restitution:0.3,texture:""},//接地面
+
+	{type:"box",x1:345,x2:315,y1:310,y2:-310,z1:1830,z2:0,rx:0,ry:0,rz:0,mass:17000,density:7.8,color:0xFFFFFF,friction:0.52,restitution:0.3,texture:"translucent"},//側面
+	{type:"box",x1:-345,x2:-315,y1:310,y2:-310,z1:1830,z2:0,rx:0,ry:0,rz:0,mass:17000,density:7.8,color:0xFFFFFF,friction:0.6,restitution:0.3,texture:"translucent"},//側面
+
+	{type:"box",x1:315,x2:-315,y1:310,y2:-310,z1:1830,z2:1800,rx:0,ry:0,rz:0,mass:8000,density:7.8,color:0xFFFFFF,friction:0.6,restitution:0.3,texture:"translucent"},//天板
+	{type:"box",x1:315,x2:-315,y1:310,y2:-260,z1:1030,z2:1000,rx:0,ry:0,rz:0,mass:1000,density:7.8,color:0xFFFFFF,friction:0.6,restitution:0.3,texture:""},//真ん中の仕切り
+	{type:"box",x1:315,x2:-315,y1:295,y2:-260,z1:1040,z2:1030,rx:0,ry:0,rz:0,mass:500,density:7.8,color:0x322020,friction:0.6,restitution:0.3,texture:""},//真ん中の仕切りの上
+	{type:"box",x1:315,x2:-315,y1:310,y2:-310,z1:40,z2:0,rx:0,ry:0,rz:0,mass:5000,density:7.8,color:0x322020,friction:0.6,restitution:0.3,texture:""},//底面
+	{type:"box",x1:315,x2:-315,y1:-260,y2:-310,z1:1800,z2:40,rx:0,ry:0,rz:0,mass:23000,density:7.8,color:0xFFFFFF,friction:0.6,restitution:0.3,texture:"translucent"},//背面
+	{type:"box",x1:15,x2:-15,y1:90,y2:-260,z1:1145,z2:1040,rx:0,ry:0,rz:0,mass:1000,density:7.8,color:0x493851,friction:0.6,restitution:0.3,texture:""},//上の棚の仕切り
+
+	{type:"box",x1:15,x2:-15,y1:310,y2:-260,z1:1000,z2:860,rx:0,ry:0,rz:0,mass:5000,density:7.8,color:0x493851,friction:0.6,restitution:0.3,texture:""},//下の仕切り
+	{type:"box",x1:315,x2:-315,y1:310,y2:-260,z1:860,z2:830,rx:0,ry:0,rz:0,mass:1000,density:7.8,color:0x322020,friction:0.6,restitution:0.3,texture:""},
+	{type:"box",x1:315,x2:-315,y1:310,y2:-260,z1:450,z2:420,rx:0,ry:0,rz:0,mass:1000,density:7.8,color:0x322020,friction:0.6,restitution:0.3,texture:""},
+
+	{type:"box",x1:315,x2:-315,y1:90,y2:-260,z1:1595,z2:1575,rx:0,ry:0,rz:0,mass:2000,density:7.8,color:0x322020,friction:0.6,restitution:0.3,texture:""},
+	{type:"box",x1:315,x2:-315,y1:-45,y2:-260,z1:1475,z2:1455,rx:0,ry:0,rz:0,mass:1000,density:7.8,color:0xFF2020,friction:0.6,restitution:0.3,texture:""},
+	{type:"box",x1:315,x2:-315,y1:90,y2:-260,z1:1355,z2:1335,rx:0,ry:0,rz:0,mass:2500,density:7.8,color:0x322020,friction:0.6,restitution:0.3,texture:""},
+	{type:"box",x1:315,x2:-315,y1:90,y2:-260,z1:1165,z2:1145,rx:0,ry:0,rz:0,mass:3000,density:7.8,color:0x322020,friction:0.6,restitution:0.3,texture:""},
+
+	{type:"cylinder",x1:305+5,x2:305-5,y1:303+385,y2:303-385,z1:1415,z2:1415,rx:90,ry:0,rz:0,mass:400,density:1.5,color:0x00FFFF,friction:0.6,restitution:0.3,texture:""},//扉棒
+	{type:"cylinder",x1:-305+5,x2:-305-5,y1:303+385,y2:303-385,z1:1415,z2:1415,rx:90,ry:0,rz:0,mass:400,density:1.5,color:0x00FFFF,friction:0.6,restitution:0.3,texture:""},//扉棒
+
+  ]
+  ,posx:1050,posy:0,posz:1010,rotx:0,roty:0,rotz:90
+}

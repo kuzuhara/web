@@ -1,0 +1,9 @@
+{
+  dimension:[
+	{type:"capsule",x1:0+20,x2:0-20,y1:0,y2:0,z1:30,z2:-30,rx:0,ry:0,rz:0,mass:60,density:1.5,color:0xFFFFFF,friction:0.4,restitution:0.3,texture:"usecolor"},//‘¤–Ê
+ ]
+  ,posx:700,posy:-252,posz:1498,rotx:90,roty:0,rotz:0
+  ,number1:6,dx1:0,dy1:42,dz1:0
+  ,number2:2,dx2:42,dy2:0,dz2:0
+
+}

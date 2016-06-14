@@ -1,0 +1,8 @@
+{
+  "dimension":[
+	{"type":"cylinder","x1":100,"x2":-100,"y1":20,"y2":0,"z1":0,"z2":0,"rx":90,"ry":0,"rz":0,"mass":0,"density":1.07,"color":0x888888,"friction":0.371,"restitution":0.3,"texture":""},
+	{"type":"cylinder","x1":25,"x2":-25,"y1":60,"y2":-60,"z1":130,"z2":10,"rx":80,"ry":0,"rz":0,"mass":0,"density":1.07,"color":0x555555,"friction":0.371,"restitution":0.3,"texture":""},
+	{"type":"box","x1":270,"x2":-270,"y1":50,"y2":10,"z1":410,"z2":70,"rx":0,"ry":0,"rz":0,"mass":0,"density":1.07,"color":0x222222,"friction":0.371,"restitution":0.3,"texture":""},
+  ]
+  ,posx:-1450,posy:850,posz:700,rotx:0,roty:0,rotz:270,
+}

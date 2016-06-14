@@ -1,0 +1,6 @@
+{
+  dimension:[
+	{type:"box",x1:165,x2:-165,y1:89.5,y2:-89.5,z1:38,z2:0,rx:0,ry:0,rz:0,mass:2100,density:0,color:0x444444,friction:0.6,restitution:0.3,texture:""},//Blu-ray recorder
+  ]
+  ,posx:-1225,posy:1225,posz:245,rotx:0,roty:0,rotz:-135
+}

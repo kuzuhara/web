@@ -1,0 +1,11 @@
+{
+  dimension:[
+	//フライ返し
+	{type:"tube",x1:0+12,x2:0-12,y1:0,y2:0,z1:71+5,z2:71-5,rx:0,ry:90,rz:0,thickness:5,mass:0.1,density:2.7,color:0x999999,friction:0.15,restitution:0.4,texture:""},//掛ける所
+	{type:"cylinder",x1:0+8,x2:0-8,y1:0+55.5,y2:0-55.5,z1:0,z2:0,rx:90,ry:0,rz:0,mass:20,density:2.7,color:0xbb1111,friction:0.15,restitution:0.4,texture:""},//持ち手
+	{type:"box",x1:1,x2:-1,y1:5,y2:-5,z1:-55.5,z2:-166.5,rx:0,ry:0,rz:0,mass:20,density:2.7,color:0x999999,friction:0.15,restitution:0.4,texture:""},//持ち手の先
+	{type:"box",x1:5+0.25,x2:5-0.25,y1:37,y2:-37,z1:-166.5,z2:-299,rx:0,ry:-5,rz:0,mass:20,density:2.7,color:0x999999,friction:0.15,restitution:0.4,texture:""},//フライ返しの部分
+  ]
+  ,posx:-1265,posy:900,posz:1165,rotx:0,roty:0,rotz:0
+
+}

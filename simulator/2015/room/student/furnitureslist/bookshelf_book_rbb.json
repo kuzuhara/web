@@ -1,0 +1,7 @@
+{
+  dimension:[
+	{name:"book",type:"box",x1:9,x2:-9,y1:116,y2:-116,z1:170,z2:0,rx:0,ry:0,rz:0,mass:175,density:0,color:0xFFFFFF*Math.random(),friction:0.4,restitution:0.2,texture:""},//–{’I‰E‰º‰œ
+  ]
+  ,posx:714-30,posy:-1415,posz:100+40,rotx:90,roty:-20,rotz:0
+  ,number:3,dx:-15,dy:0,dz:0
+}

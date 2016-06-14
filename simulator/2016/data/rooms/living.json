@@ -1,0 +1,22 @@
+{
+	name:"リビング",
+	wX:3000, wY:2000, wZ:2000, //widthX widthY widthZ,
+		//うえ　　　　した　　　　　東西北南
+	texture:["ceiling.jpg","ceiling.jpg","ceiling.jpg","ceiling.jpg","ceiling.jpg","ceiling.jpg" ],
+	color:[0x000000, 0x110000, 0x001100, 0x000011, 0x001111, 0x111111],
+	useTexture:[1,1,1,1,1,1],
+	opacity:[1,1,0.5,0.5,1,0.5], //不透明度
+	friction:1,
+	camera_r:9000,
+	camera_theta:Math.PI*0.1,
+	camera_phi:Math.PI*0.25,
+	furnitures:[
+		//name		x y z	rx ry rz	isFixed
+		{id:0, x:0, y:0, z:0, rx:0, ry:0, rz:0, isFixed:0},
+		{id:0, x:100, y:100, z:0, rx:0, ry:0, rz:0, isFixed:0}
+//		{位置x:数値, 位置y:数値, 位置z:数値, 回転x:数値, 回転y:数値, 回転z:数値, 固定フラグ:bool値},
+
+	]
+
+
+}

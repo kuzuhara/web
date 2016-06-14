@@ -1,0 +1,7 @@
+{
+  dimension:[
+	{type:"tube",x1:27.5,x2:-27.5,y1:0.25*0,y2:-0.25*0,z1:100,z2:0,rx:0,ry:0,rz:0,mass:45,thickness:0.80,density:1.07,color:0xFF0000,friction:0.371,restitution:0.3,texture:"translucent"},//Žü‚è
+	{type:"cylinder",x1:27.5,x2:-27.5,y1:0.25,y2:-0.25,z1:140-70,z2:0-70,rx:90,ry:0,rz:0,mass:8,density:1.07,color:0xFFFF00,friction:0.371,restitution:0.3,texture:""},//’ê
+]
+  ,posx:145,posy:-1400,posz:945,rotx:0,roty:0,rotz:0,
+}

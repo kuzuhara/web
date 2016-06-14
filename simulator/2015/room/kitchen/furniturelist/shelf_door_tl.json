@@ -1,0 +1,7 @@
+{
+  dimension:[
+	{type:"tube",x1:0+6,x2:0-6,y1:0,y2:0,z1:0+255,z2:0-255,rx:0,ry:0,rz:0,thickness:1,mass:0,density:0.4,color:0x622030,friction:0.4,restitution:0.384,texture:""},//”à
+	{type:"box",x1:-10,x2:-368,y1:0+5,y2:0-5,z1:255,z2:-255,rx:0,ry:0,rz:0,thickness:1,mass:0,density:0.4,color:0xFFFFFF,friction:0.4,restitution:0.384,texture:"translucent"},//”à–{‘Ì
+  ]
+  ,posx:351,posy:-929,posz:1684,rotx:0,roty:0,rotz:0
+}

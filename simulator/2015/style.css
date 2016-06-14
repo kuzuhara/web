@@ -1,0 +1,29 @@
+#jsar, #value {
+	display : inline-block;
+	_display : inline;
+}
+
+table {
+	border-collapse : collapse;
+}
+
+table,td,th {
+//	border-style : solid;
+}
+
+td.head {
+	text-align : center;
+}
+
+#value td:not(.head) {
+	text-align : right;
+}
+
+#value th {
+	width : 100px;
+}
+
+#timeline td {
+	text-align : right;
+	width : 100px;
+}

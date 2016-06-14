@@ -1,0 +1,7 @@
+{
+  dimension:[
+	{type:"box",x1:0+75,x2:0-75,y1:0+80,y2:0-80,z1:50,z2:0,rx:0,ry:0,rz:0,mass:300,density:0.0,color:0x99DDFF,friction:0.4,restitution:0.3,texture:""},
+ ]
+  ,posx:-1480,posy:800,posz:300,rotx:0,roty:0,rotz:0
+  ,number:3,dx:0,dy:0-180,dz:0
+}

@@ -1,0 +1,15 @@
+{
+  dimension:[
+
+	{type:"box",x1:0+285,x2:0-285,y1:300+12,y2:300-12,z1:0+190,z2:0-190,rx:0,ry:0,rz:0,mass:300,density:7.5,color:0x4C4C4C,friction:0.52,restitution:0.3,texture:"usecolor"},//ë§ñ 
+	{type:"box",x1:0+285,x2:0-285,y1:-300+12,y2:-300-12,z1:0+190,z2:0-190,rx:0,ry:0,rz:0,mass:300,density:7.5,color:0x4C4C4C,friction:0.52,restitution:0.3,texture:"usecolor"},//ë§ñ 
+	{type:"box",x1:0+270,x2:0+250,y1:300-12,y2:-300+12,z1:0+190,z2:0-190,rx:0,ry:0,rz:0,mass:450,density:7.5,color:0xFFFFFF,friction:0.52,restitution:0.3,texture:"translucent"},//îwñ 
+	{type:"box",x1:0+250,x2:0-240,y1:300-12,y2:-300+12,z1:0-160,z2:0-190,rx:0,ry:0,rz:0,mass:500,density:7.5,color:0x4C4C4C,friction:0.52,restitution:0.3,texture:"usecolor"},//íÍñ 
+
+	{type:"box",x1:0-255,x2:0-285,y1:300-12,y2:-300+12,z1:0+190,z2:0-190,rx:0,ry:0,rz:0,mass:400,density:7.5,color:0xFFFFFF,friction:0.52,restitution:0.3,texture:"translucent"},//ê≥ñ 
+
+
+ ]
+  ,posx:954,posy:0,posz:623,rotx:0,roty:0,rotz:0
+  ,number:2,dx:0,dy:0,dz:-410
+}

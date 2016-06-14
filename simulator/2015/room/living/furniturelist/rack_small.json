@@ -1,0 +1,17 @@
+{//BoxÇ™èÊÇ¡ÇƒÇÈìz
+  dimension:[
+	{type:"box",x1:155,x2:125,y1:205,y2:175,z1:0,z2:-165,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x826060,friction:0.4,restitution:0.384,texture:""},//ãr
+	{type:"box",x1:-155,x2:-125,y1:205,y2:175,z1:0,z2:-165,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x826060,friction:0.4,restitution:0.384,texture:""},//ãr
+	{type:"box",x1:155,x2:125,y1:-205,y2:-175,z1:0,z2:-165,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x826060,friction:0.4,restitution:0.384,texture:""},//ãr
+	{type:"box",x1:-155,x2:-125,y1:-205,y2:-175,z1:0,z2:-165,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x826060,friction:0.4,restitution:0.384,texture:""},//ãr
+
+	{type:"box",x1:175,x2:-175,y1:225,y2:-225,z1:10,z2:0,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x822020,friction:0.4,restitution:0.384,texture:""},//ìVî¬
+
+	{type:"box",x1:155,x2:125,y1:175,y2:-175,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x333333,friction:0.4,restitution:0.384,texture:""},
+	{type:"box",x1:-155,x2:-125,y1:175,y2:-175,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x333333,friction:0.4,restitution:0.384,texture:""},
+	{type:"box",x1:125,x2:-125,y1:205,y2:175,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x333333,friction:0.4,restitution:0.384,texture:""},
+	{type:"box",x1:125,x2:-125,y1:-205,y2:-175,z1:0,z2:-20,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x333333,friction:0.4,restitution:0.384,texture:""},
+
+  ]
+  ,posx:95,posy:-1475,posz:150,rotx:0,roty:0,rotz:0
+}

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang = "ja">
+	<head>
+		<link rel="stylesheet" href="style.css" type="text/css">
+		<meta charset = "utf-8">
+		<title>地震シミュレーター</title>
+	</head>
+	<body>
+		<table id="timeline">
+			<tr>
+				<th>フレーム数</th>
+				<td id="frame"></td>
+			</tr>
+			<tr>
+				<th>時間</th>
+				<td id="time"></td>
+			</tr>
+		</table>
+
+		<div id="viewport"></div>
+
+
+		<table id="value">
+			<tr>
+				<th class ="head">位置<br>(cm)</th>
+				<td id="E-W_pos"></td>
+				<td id="N-S_pos"></td>
+				<td id="U-D_pos"></td>
+				<th class ="head">速度<br>(cm/s)</th>
+				<td id="E-W_vel"></td>
+				<td id="N-S_vel"></td>
+				<td id="U-D_vel"></td>
+				<th class ="head">加速度<br>(gal)</th>
+				<td id="E-W_acc"></td>
+				<td id="N-S_acc"></td>
+				<td id="U-D_acc"></td>
+			</tr>
+		</table>
+
+		<script src="http://maps.google.com/maps?file=api&v=2&key=ABQIAAAAUiSm4yE-UDgb8kviBG-3fxTET7FL1OGiEo0132Tsz7xytqsKmxTD2VNE7QBz0JNWWmZzj89DQ44VNA&sensor=false" type="text/javascript" charset="utf-8"></script>
+		<script src="script/jquery-2.1.4.min.js"></script>
+		<script src="script/three.js"></script>
+		<script src="physi.js"></script>
+		<script src="Projector.js"></script>
+		<script src="stats.js"></script>
+		<script src="DropData.js"></script>
+		<script src="loadFiles.js"></script>
+		<script src="Assemble.js"></script>
+		<script src="QuakeSimulator.js"></script>
+	</body>
+</html>

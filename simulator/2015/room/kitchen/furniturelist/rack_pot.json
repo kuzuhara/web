@@ -1,0 +1,7 @@
+{
+  dimension:[
+	{type:"cylinder",x1:0+120,x2:0-120,y1:0+150,y2:0-150,z1:0,z2:0,rx:0,ry:0,rz:0,mass:2600,density:0.0,color:0xFFFFFF,friction:0.4,restitution:0.3,texture:""},//ƒ|ƒbƒg
+  ]
+  ,posx:-80,posy:1110,posz:223,rotx:90,roty:0,rotz:0
+
+}

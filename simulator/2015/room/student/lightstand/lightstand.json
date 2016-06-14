@@ -1,0 +1,14 @@
+{
+	base_r:90, base_h:25, arm_b_r:20, arm_b_h:150, arm_t_r:20, arm_t_h:200, head_r_t:50, head_r_b:100, head_h:100, angle_b:Math.PI*0.3, angle_t:Math.PI*0.25, angle_h:Math.PI*0.2,
+	posx:590,posy:-1350,posz:1075,rotx:0,roty:0,rotz:50,
+
+	color_base:0x888888,
+	color_bar_b:0x555555,
+	color_bar_t:0x555555,
+	color_shade:0x333333,
+
+	m_base:500,//’ê
+	m_arm_b:50,//‰º’Œ
+	m_arm_t:50,//ã’Œ
+	m_head:400,//“ª
+}

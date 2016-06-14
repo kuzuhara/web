@@ -1,0 +1,12 @@
+{
+  dimension:[
+	{type:"box",x1:87,x2:-87,y1:80.5,y2:-80.5,z1:52,z2:20,rx:0,ry:0,rz:0,mass:250,density:1.07,color:0x999999,friction:0.371,restitution:0.3,texture:""},
+	{type:"box",x1:87,x2:-30,y1:80.5,y2:-80.5,z1:57,z2:52,rx:0,ry:0,rz:0,mass:80,density:1.07,color:0x999999,friction:0.371,restitution:0.3,texture:""},
+	{type:"box",x1:-70,x2:-87,y1:80.5,y2:-80.5,z1:57,z2:52,rx:0,ry:0,rz:0,mass:60,density:1.07,color:0x999999,friction:0.371,restitution:0.3,texture:""},
+
+	{type:"box",x1:-30,x2:-70,y1:80.5,y2:75.5,z1:57,z2:52,rx:0,ry:0,rz:0,mass:5,density:1.07,color:0x999999,friction:0.371,restitution:0.3,texture:""},//à¯Ç¡ä|ÇØÇÈèÍèä
+	{type:"box",x1:-30,x2:-70,y1:-80.5,y2:-75.5,z1:57,z2:52,rx:0,ry:0,rz:0,mass:5,density:1.07,color:0x999999,friction:0.371,restitution:0.3,texture:""},//à¯Ç¡ä|ÇØÇÈèÍèä
+
+  ]
+  ,posx:1450,posy:-1450,posz:690,rotx:0,roty:0,rotz:180
+}

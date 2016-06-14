@@ -1,0 +1,6 @@
+{
+  dimension:[
+	{type:"cylinder",x1:20,x2:-20,y1:70,y2:-70,z1:0,z2:0,rx:0,ry:0,rz:0,mass:110,density:1.35,color:0x00FFFF,friction:0.25,restitution:0.3,texture:""},//bookshelf‰º‚Ì‰~’Œ(ôŠçƒtƒH[ƒ€)
+]
+  ,posx:950,posy:-1350,posz:100,rotx:90,roty:0,rotz:0,
+}

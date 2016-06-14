@@ -1,0 +1,19 @@
+{
+  dimension:[
+	{type:"cylinder_v",x1:480,x2:440,y1:205,y2:175,z1:-350,z2:-370,rx:0,ry:0,rz:0,mass:0,density:1.0,color:0x333333,friction:0.6,restitution:0.3,texture:""},//‹r
+	{type:"cylinder_v",x1:480,x2:440,y1:-205,y2:-175,z1:-350,z2:-370,rx:0,ry:0,rz:0,mass:0,density:1.0,color:0x333333,friction:0.6,restitution:0.3,texture:""},//‹r
+	{type:"cylinder_v",x1:-480,x2:-440,y1:205,y2:175,z1:-350,z2:-370,rx:0,ry:0,rz:0,mass:0,density:1.0,color:0x333333,friction:0.6,restitution:0.3,texture:""},//‹r
+	{type:"cylinder_v",x1:-480,x2:-440,y1:-205,y2:-175,z1:-350,z2:-370,rx:0,ry:0,rz:0,mass:0,density:1.0,color:0x333333,friction:0.6,restitution:0.3,texture:""},//‹r
+	{type:"cylinder_v",x1:20,x2:-20,y1:205,y2:175,z1:-350,z2:-370,rx:0,ry:0,rz:0,mass:0,density:1.0,color:0x333333,friction:0.6,restitution:0.3,texture:""},//‹r
+
+	{type:"box",x1:480,x2:-480,y1:210,y2:-210,z1:20,z2:0,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x8b4513,friction:0.4,restitution:0.384,texture:""},//“V”Â
+	{type:"box",x1:480,x2:-480,y1:210,y2:-210,z1:-330,z2:-350,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x8b4513,friction:0.4,restitution:0.384,texture:""},//’ê”Â
+	{type:"box",x1:460,x2:385,y1:185,y2:170,z1:-330,z2:0,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x8b4513,friction:0.4,restitution:0.384,texture:""},//‘O–Ê
+	{type:"box",x1:-460,x2:-385,y1:185,y2:170,z1:-330,z2:0,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x8b4513,friction:0.4,restitution:0.384,texture:""},//‘O–Ê
+	{type:"box",x1:415,x2:395,y1:170,y2:-210,z1:-330,z2:0,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x8b4513,friction:0.4,restitution:0.384,texture:""},//‘¤–Ê
+	{type:"box",x1:-415,x2:-395,y1:170,y2:-210,z1:-330,z2:0,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x8b4513,friction:0.4,restitution:0.384,texture:""},//‘¤–Ê
+	{type:"box",x1:395,x2:-395,y1:-200,y2:-210,z1:-160,z2:-330,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0xFFFFFF,friction:0.4,restitution:0.384,texture:"translucent"},//”w–Ê
+	{type:"box",x1:395,x2:-395,y1:170,y2:-170,z1:-145,z2:-165,rx:0,ry:0,rz:0,mass:0,density:0.4,color:0x8b4513,friction:0.4,restitution:0.384,texture:""},//’†’i
+  ]
+  ,posx:-1200,posy:1200,posz:202,rotx:0,roty:0,rotz:-135
+}

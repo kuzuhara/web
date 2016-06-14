@@ -1,0 +1,16 @@
+{
+  dimension:[
+	{type:"box",x1:-275,x2:-230,y1:-850,y2:-800,z1:0,z2:-130,rx:0,ry:0,rz:0,mass:50,density:0.4,color:0x822020,friction:0.4,restitution:0.384,texture:""},//ãr
+	{type:"box",x1:-275,x2:-230,y1:850,y2:800,z1:0,z2:-130,rx:0,ry:0,rz:0,mass:50,density:0.4,color:0x822020,friction:0.4,restitution:0.384,texture:""},//ãr
+	{type:"box",x1:275,x2:230,y1:-850,y2:-800,z1:0,z2:-130,rx:0,ry:0,rz:0,mass:50,density:0.4,color:0x822020,friction:0.4,restitution:0.384,texture:""},//ãr
+	{type:"box",x1:275,x2:230,y1:850,y2:800,z1:0,z2:-130,rx:0,ry:0,rz:0,mass:50,density:0.4,color:0x822020,friction:0.4,restitution:0.384,texture:""},//ãr
+
+	{type:"box",x1:275,x2:-275,y1:850,y2:-850,z1:250,z2:0,rx:0,ry:0,rz:0,mass:30000,density:1.2,color:0xEEDD44,friction:0.43,restitution:0.15,texture:""},//ç¿ê»
+	{type:"box",x1:-155,x2:275,y1:-850,y2:-700,z1:400,z2:250,rx:0,ry:0,rz:0,mass:15000,density:1.2,color:0xFFFF00,friction:0.43,restitution:0.15,texture:""},//ç∂
+	{type:"box",x1:-155,x2:275,y1:850,y2:700,z1:400,z2:250,rx:0,ry:0,rz:0,mass:15000,density:1.2,color:0xFFFF00,friction:0.43,restitution:0.15,texture:""},//âE
+	{type:"box",x1:320,x2:140,y1:700,y2:-700,z1:700,z2:200,rx:0,ry:10,rz:0,mass:20000,density:1.2,color:0xFFFF00,friction:0.43,restitution:0.15,texture:""},//îwÇ‡ÇΩÇÍ
+
+
+  ]
+  ,posx:1450,posy:-350,posz:413,rotx:0,roty:0,rotz:0
+}

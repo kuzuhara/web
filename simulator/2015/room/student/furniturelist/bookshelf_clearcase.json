@@ -1,0 +1,6 @@
+{
+  dimension:[
+	{type:"box",x1:75,x2:-75,y1:75,y2:-75,z1:220,z2:0,rx:0,ry:0,rz:0,mass:0,density:1.35,color:0x00FFFF,friction:0.25,restitution:0.3,texture:"clearcase.png"},//本棚右下のクリアケース
+]
+  ,posx:540,posy:-1410,posz:130,rotx:0,roty:0,rotz:0,
+}

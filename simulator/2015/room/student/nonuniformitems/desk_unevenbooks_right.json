@@ -1,0 +1,21 @@
+{
+	name:"book",
+	startx:-629, // 一番右の本の右端
+	starty:-1460, //本の後ろの位置
+	startz:733, //本の下の位置
+	friction:0.4,
+	restitution:0.2,
+	direction:0,
+	align:true,
+	individual:[
+		{sx:21,sy:150,sz:215,mass:513,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:15,sy:150,sz:230,mass:346,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:14,sy:189,sz:258,mass:554,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:14,sy:185,sz:238,mass:478,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:15,sy:152,sz:211,mass:372,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:15,sy:153,sz:211,mass:374,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:20,sy:188,sz:238,mass:533,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:15,sy:153,sz:211,mass:374,texture:"",color:0xFFFFFF*Math.random()},
+		{sx:15,sy:150,sz:230,mass:346,texture:"",color:0xFFFFFF*Math.random()},
+	]
+}

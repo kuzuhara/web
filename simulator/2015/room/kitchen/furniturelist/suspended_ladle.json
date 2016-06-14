@@ -1,0 +1,21 @@
+{
+  dimension:[
+	//Ç®ÇΩÇ‹
+	{type:"cylinder_v",x1:-55+8,x2:-55-8,y1:0,y2:0,z1:157+75,z2:157-75,rx:0,ry:0,rz:21,mass:20,density:1.07,color:0xbb1111,friction:0.15,restitution:0.4,texture:""},//éùÇøéË
+	{type:"cylinder_v",x1:-10+5,x2:-10-5,y1:0,y2:0,z1:40+50,z2:40-50,rx:0,ry:0,rz:21,mass:20,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:""},//éùÇøéËÇÃêÊ
+	{type:"tube",x1:-86+12,x2:-86-12,y1:0,y2:0,z1:242+5,z2:242-5,rx:0,ry:75,rz:21,thickness:5,mass:0.01,density:2.7,color:0xA5A5A5,friction:0.15,restitution:0.4,texture:""},//ä|ÇØÇÈèä
+
+	{type:"truncated cone_nobase",x1:48+40,x2:48-40,y1:0,y2:0,z1:0,z2:-3.4,rx:0,ry:0,rz:0,mass:3,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:772/2/10},//Ç∑Ç≠Ç§èä
+	{type:"truncated cone_nobase",x1:48+772/2/10,x2:48-772/2/10,y1:0,y2:0,z1:-3.4,z2:-6.6,rx:0,ry:0,rz:0,mass:3,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:736/2/10},//Ç∑Ç≠Ç§èä
+	{type:"truncated cone_nobase",x1:48+736/2/10,x2:48-736/2/10,y1:0,y2:0,z1:-6.6,z2:-9.9,rx:0,ry:0,rz:0,mass:3,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:687/2/10},//Ç∑Ç≠Ç§èä
+	{type:"truncated cone_nobase",x1:48+687/2/10,x2:48-687/2/10,y1:0,y2:0,z1:-9.9,z2:-13.1,rx:0,ry:0,rz:0,mass:3,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:644/2/10},//Ç∑Ç≠Ç§èä
+	{type:"truncated cone_nobase",x1:48+644/2/10,x2:48-644/2/10,y1:0,y2:0,z1:-13.1,z2:-16.4,rx:0,ry:0,rz:0,mass:3,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:565/2/10},//Ç∑Ç≠Ç§èä
+	{type:"truncated cone_nobase",x1:48+565/2/10,x2:48-565/2/10,y1:0,y2:0,z1:-16.4,z2:-19.6,rx:0,ry:0,rz:0,mass:3,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:459/2/10},//Ç∑Ç≠Ç§èä
+	{type:"truncated cone_nobase",x1:48+459/2/10,x2:48-459/2/10,y1:0,y2:0,z1:-19.6,z2:-21.4,rx:0,ry:0,rz:0,mass:6,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:0},//Ç∑Ç≠Ç§èä
+
+
+//	{type:"truncated cone_nobase",x1:48+25,x2:48-25,y1:0,y2:0,z1:-180+9,z2:-180-9,rx:180,ry:0,rz:-7,mass:40,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:"",rb:40},//Ç∑Ç≠Ç§èä
+//	{type:"cylinder",x1:49+25,x2:49-25,y1:0,y2:0,z1:-189,z2:-189,rx:90,ry:0,rz:7,mass:30,thickness:3,density:2.7,color:0xA5A5A5,friction:0.25,restitution:0.3,texture:""},//Ç∑Ç≠Ç§èäÇÃíÍñ 
+  ]
+  ,posx:-1256,posy:800,posz:1148,rotx:0,roty:21,rotz:0
+}

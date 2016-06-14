@@ -1,0 +1,20 @@
+{
+  dimension:[
+	{type:"cylinder",x1:167.5,x2:147.5,y1:362.5,y2:352.5,z1:-1065.5,z2:-1065.5,rx:90,ry:0,rz:0,mass:10,density:1.0,color:0x111111,friction:0.6,restitution:0.3,texture:""},//ê⁄ínñ 
+	{type:"cylinder",x1:167.5,x2:147.5,y1:-362.5,y2:-352.5,z1:-1065.5,z2:-1065.5,rx:90,ry:0,rz:0,mass:10,density:1.0,color:0x111111,friction:0.6,restitution:0.3,texture:""},//ê⁄ínñ 
+	{type:"cylinder",x1:-167.5,x2:-147.5,y1:362.5,y2:352.5,z1:-1065.5,z2:-1065.5,rx:90,ry:0,rz:0,mass:10,density:1.0,color:0x111111,friction:0.6,restitution:0.3,texture:""},//ê⁄ínñ 
+	{type:"cylinder",x1:-167.5,x2:-147.5,y1:-362.5,y2:-352.5,z1:-1065.5,z2:-1065.5,rx:90,ry:0,rz:0,mass:10,density:1.0,color:0x111111,friction:0.6,restitution:0.3,texture:""},//ê⁄ínñ 
+
+	{type:"box",x1:167.5,x2:-167.5,y1:367.5,y2:-367.5,z1:25,z2:0,rx:0,ry:0,rz:0,mass:2000,density:7.8,color:0x333333,friction:0.52,restitution:0.3,texture:""},//î¬1(è„Ç©ÇÁ)
+	{type:"box",x1:167.5,x2:-167.5,y1:367.5,y2:-367.5,z1:-312,z2:-337,rx:0,ry:0,rz:0,mass:2000,density:7.8,color:0x333333,friction:0.52,restitution:0.4,texture:""},//î¬2
+	{type:"box",x1:167.5,x2:-167.5,y1:367.5,y2:-367.5,z1:-589,z2:-614,rx:0,ry:0,rz:0,mass:2000,density:7.8,color:0x333333,friction:0.52,restitution:0.4,texture:""},//î¬3
+	{type:"box",x1:167.5,x2:-167.5,y1:367.5,y2:-367.5,z1:-996,z2:-1021,rx:0,ry:0,rz:0,mass:2000,density:7.8,color:0x333333,friction:0.52,restitution:0.4,texture:""},//î¬4
+
+	{type:"cylinder",x1:167.5,x2:147.5,y1:957.5,y2:-242.5,z1:-460,z2:-460,rx:90,ry:0,rz:0,mass:500,density:7.8,color:0x774635,friction:0.52,restitution:0.4,texture:""},//ãr
+	{type:"cylinder",x1:167.5,x2:147.5,y1:-957.5,y2:242.5,z1:-460,z2:-460,rx:90,ry:0,rz:0,mass:500,density:7.8,color:0x774635,friction:0.52,restitution:0.4,texture:""},//ãr
+	{type:"cylinder",x1:-167.5,x2:-147.5,y1:957.5,y2:-242.5,z1:-460,z2:-460,rx:90,ry:0,rz:0,mass:500,density:7.8,color:0x774635,friction:0.52,restitution:0.4,texture:""},//ãr
+	{type:"cylinder",x1:-167.5,x2:-147.5,y1:-957.5,y2:242.5,z1:-460,z2:-460,rx:90,ry:0,rz:0,mass:500,density:7.8,color:0x774635,friction:0.52,restitution:0.4,texture:""},//ãr
+  ]
+  ,posx:0,posy:1100,posz:592,rotx:0,roty:0,rotz:90
+
+}
