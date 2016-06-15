@@ -102,8 +102,8 @@ function quote_smart($value)
 <script type="text/javascript">var rows = "<?= $rows ?>";</script>
 <script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>
 <script type="text/javascript">var test=[];
-    test[0] = JSON.stringify('<?php echo  $jsonName[0]; ?>');
-    test[1] = JSON.stringify('<?php echo  $jsonName[1]; ?>');
+    test[0] = "abc";
+    test[1] = "def";
 </script>
 <script type="text/javascript" src="script.js"></script>
 
