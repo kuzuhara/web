@@ -7,12 +7,12 @@
   $friction;
   $restitution;
   $i;
+  $fullname="";
 
-
-  $test=[];
-  $test[0]="aaa";
-  $test[1]="bbb";
-  $jsonTest=json_encode($test);
+//  $test=[];
+//  $test[0]="aaa";
+//  $test[1]="bbb";
+//  $jsonTest=json_encode($test);
   // MySQLへ接続する
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
 
@@ -45,13 +45,15 @@ function quote_smart($value)
       $tempHtml .= "<tr>";
       $tempHtml .= "<td>".$row["id"]."</td><td>".$row["friction"]."</td><td>".$row["restitution"]."</td><td>".$row["name"]."</td>";
       $tempHtml .= "</tr>\n";
-      $name[$i]=$row["name"];
-      echo $name[$i];
+//      $name[$i]=(string)$row["name"];
+//      echo $name[$i];
+//      $fullname+=$row["name"]+",";
+      $fullname=sprintf("%s%s,", $fullname, $row["name"]);
       $friction[$i]=$row["friction"];
       $restitution[$i]=$row["restitution"];
       $i++;
     }
-    $jsonName=json_encode($name);
+//    $jsonName=json_encode($name);
     $jsonFriction=json_encode($friction);
     $jsonRestitution=json_encode($restitution);
     $msg = $rows."件のデータがあります。";
@@ -76,6 +78,7 @@ function quote_smart($value)
 
   // MySQLへの接続を閉じる
   mysql_close($link) or die("MySQL切断に失敗しました。");
+  echo $fullname;
 ?>
 
 <html>
@@ -101,9 +104,14 @@ function quote_smart($value)
 
 <script type="text/javascript">var rows = "<?= $rows ?>";</script>
 <script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>
-<script type="text/javascript">var test=[];
-    test[0] = "abc";
+<script type="text/javascript">
+//	var name = JSON.parse('<?php echo  $jsonName; ?>');
+</script>
+<script type="text/javascript">
+	var test=[];
+    test[0] = "efg";
     test[1] = "def";
+	var fullname="<?php echo $fullname ?>";
 </script>
 <script type="text/javascript" src="script.js"></script>
 
