@@ -102,6 +102,17 @@ function quote_smart($value)
       <?= $tempHtml2 ?>
     </table>
 
+//•”‰®E‰Æ‹ï‚ğ‚±‚±‚É“n‚¹‚é‚æ‚¤‚É‚·‚é
+    <form action="cgi-bin/formmail.cgi" method="post">
+      <p>ŒŒ‰tŒ^F<br>
+      <select name="blood">
+        <option value="A">AŒ^</option>
+        <option value="B">BŒ^</option>
+        <option value="O">OŒ^</option>
+        <option value="AB">ABŒ^</option>
+      </select></p>
+    </form>
+
 <script type="text/javascript">var rows = "<?= $rows ?>";</script>
 <script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>
 <script type="text/javascript">
