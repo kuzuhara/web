@@ -3,11 +3,11 @@
   $user = "LAA0737712";
   $pass = "Aodai7010";
   $db = "LAA0737712-aodaisimu";
-  $name;
   $friction;
   $restitution;
   $i;
   $fullname="";
+
 
 //  $test=[];
 //  $test[0]="aaa";
@@ -29,14 +29,27 @@
   $rows = mysql_num_rows($result);
   $rows2 = mysql_num_rows($result2);
 
-function quote_smart($value)
-{
+
+  function insert($id, $name, $friction, $restitution){
+    $sql = "INSERT INTO furniture (id, name, friction, restitution) VALUES ($id, $name, $friction, $restitution)";
+    $result_flag = mysql_query($sql);
+    print 'NNN';
+    if (!$result) {
+      die('SELECTクエリーが失敗しました。'.mysql_error());
+      print 'mmm';
+    }
+  }
+
+//  insert(1,'タンス', 0.1, 0.8);
+
+  function quote_smart($value)
+  {
     // 数値以外をクオートする
     if (!is_numeric($value)) {
         $value = '"' . mysql_real_escape_string($value) . '"';
     }
     return $value;
-}
+  }
 
   //表示するデータを作成
   if($rows){
@@ -87,31 +100,38 @@ function quote_smart($value)
     <title>全件表示</title>
   </head>
   <body>
-    <h3>表示</h3>
+    <h3>furnitureテーブル</h3>
     <?= $msg ?>
     <table width = "200" border = "0">
       <tr bgcolor="##ccffcc"><td>id</td><td>摩擦</td><td>反発</td><td>name</td></tr>
       <?= $tempHtml ?>
     </table>
 
+//部屋・家具をここに渡せるようにする
     <hr>
-    <h3>boxを表示</h3>
+    <form action="cgi-bin/formmail.cgi" method="post">
+      <p>部屋名：<br>
+      <select id="roomSelect">
+      </select></p>
+    </form>
+
+
+    <hr>
+    <form method="post" action="">
+    
+    <button type="submit" name="button1" value="ダミー文字列">追加</button>
+    </form>
+    <hr>
+
+    <h3>boxテーブル</h3>
     <?= $msg2 ?>
     <table width = "200" border = "0">
       <tr bgcolor="##ccffff"><td>id</td><td>幅x</td><td>幅ｙ</td><td>name</td></tr>
       <?= $tempHtml2 ?>
     </table>
 
-//部屋・家具をここに渡せるようにする
-    <form action="cgi-bin/formmail.cgi" method="post">
-      <p>血液型：<br>
-      <select name="blood">
-        <option value="A">A型</option>
-        <option value="B">B型</option>
-        <option value="O">O型</option>
-        <option value="AB">AB型</option>
-      </select></p>
-    </form>
+
+
 
 <script type="text/javascript">var rows = "<?= $rows ?>";</script>
 <script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>

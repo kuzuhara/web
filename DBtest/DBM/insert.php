@@ -7,6 +7,18 @@
 <body>
 
 <?php
+  function insert($id, $name, $friction, $restitution){
+    //$www=$id +","+ $name + "," + $friction +"," + $restitution;
+    $sql=sprintf("INSERT INTO furniture (id, name, friction, restitution) VALUES (%d,'%s',%f,%f)",$id,$name,$friction,$restitution);
+    print($sql);
+    //$sql = $www;
+    $result_flag = mysql_query($sql);
+    if (!$result_flag) {
+      die('INSERTクエリーが失敗しました。'.mysql_error());
+    }
+  }
+
+
 
 $link = mysql_connect('mysql103.phy.lolipop.lan', 'LAA0737712', 'Aodai7010');
 if (!$link) {
@@ -38,8 +50,9 @@ while ($row = mysql_fetch_assoc($result)) {
 
 print('<p>データを追加します。</p>');
 
-$sql = "INSERT INTO furniture (id, name, friction, restitution) VALUES (6, 'デジカメ', 0.9, 0.6)";
-$result_flag = mysql_query($sql);
+//$sql = "INSERT INTO furniture (id, name, friction, restitution) VALUES (2, '段ボール', 0.9, 0.6)";
+//$result_flag = mysql_query($sql);
+insert(3, 'ボール', 0.8, 0.6);
 
 if (!$result_flag) {
     die('INSERTクエリーが失敗しました。'.mysql_error());

@@ -46,7 +46,7 @@ while ($row = mysql_fetch_assoc($result)) {
 
 print('<p>データを更新します。</p>');
 
-$id = 4;
+$id = 2;
 $name = 'デジタルカメラ';
 $friction =0.2;
 
