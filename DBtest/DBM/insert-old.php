@@ -1,20 +1,24 @@
 <html>
 <head>
-<title>delete</title>
+<title>insert</title>
 <meta http-equiv="Content-Type" content="text/html; charset=SHIFT-JIS">
 </head>
 
 <body>
 
 <?php
-function quote_smart($value)
-{
-    // 数値以外をクオートする
-    if (!is_numeric($value)) {
-        $value = "'" . mysql_real_escape_string($value) . "'";
+  function insert($id, $name, $friction, $restitution){
+    //$www=$id +","+ $name + "," + $friction +"," + $restitution;
+    $sql=sprintf("INSERT INTO furniture (id, name, friction, restitution) VALUES (%d,'%s',%f,%f)",$id,$name,$friction,$restitution);
+    print($sql);
+    //$sql = $www;
+    $result_flag = mysql_query($sql);
+    if (!$result_flag) {
+      die('INSERTクエリーが失敗しました。'.mysql_error());
     }
-    return $value;
-}
+  }
+
+
 
 $link = mysql_connect('mysql103.phy.lolipop.lan', 'LAA0737712', 'Aodai7010');
 if (!$link) {
@@ -44,26 +48,17 @@ while ($row = mysql_fetch_assoc($result)) {
     print('</p>');
 }
 
-print('<p>データを更新します。</p>');
+print('<p>データを追加します。</p>');
 
-$id = 1;
-$name = 'デジタルカメラ';
-$friction =0.2;
-
-//$sql = sprintf("UPDATE furniture SET name = %s WHERE id = %s"
-//         , quote_smart($name), quote_smart($id));
-
-$sql = sprintf("DELETE FROM furniture WHERE id = %s"
-         , quote_smart($id));
-
-$result_flag = mysql_query($sql);
-
+//$sql = "INSERT INTO furniture (id, name, friction, restitution) VALUES (2, '段ボール', 0.9, 0.6)";
+//$result_flag = mysql_query($sql);
+insert(3, 'ボール', 0.8, 0.6);
 
 if (!$result_flag) {
-    die('UPDATEクエリーが失敗しました。'.mysql_error());
+    die('INSERTクエリーが失敗しました。'.mysql_error());
 }
 
-print('<p>更新後のデータを取得します。</p>');
+print('<p>追加後のデータを取得します。</p>');
 
 $result = mysql_query('SELECT id,name FROM furniture');
 if (!$result) {

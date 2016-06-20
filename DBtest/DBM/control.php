@@ -9,6 +9,7 @@
   $fullname="";
 
 
+
 //  $test=[];
 //  $test[0]="aaa";
 //  $test[1]="bbb";
@@ -29,18 +30,18 @@
   $rows = mysql_num_rows($result);
   $rows2 = mysql_num_rows($result2);
 
-
   function insert($id, $name, $friction, $restitution){
-    $sql = "INSERT INTO furniture (id, name, friction, restitution) VALUES ($id, $name, $friction, $restitution)";
+    //$www=$id +","+ $name + "," + $friction +"," + $restitution;
+    $sql=sprintf("INSERT INTO furniture (id, name, friction, restitution) VALUES (%d,'%s',%f,%f)",$id,$name,$friction,$restitution);
+    print($sql);
+    //$sql = $www;
     $result_flag = mysql_query($sql);
-    print 'NNN';
-    if (!$result) {
-      die('SELECTクエリーが失敗しました。'.mysql_error());
-      print 'mmm';
+    if (!$result_flag) {
+      die('INSERTクエリーが失敗しました。'.mysql_error());
     }
   }
 
-//  insert(1,'タンス', 0.1, 0.8);
+  //insert(1,'タンス', 0.1, 0.8);
 
   function quote_smart($value)
   {
@@ -49,6 +50,16 @@
         $value = '"' . mysql_real_escape_string($value) . '"';
     }
     return $value;
+  }
+
+////////////////////////////////////////////////////////////////////
+  function delete($id){
+    $sql = sprintf("DELETE FROM furniture WHERE id = %s"
+         , quote_smart($id));
+    $result_flag = mysql_query($sql);
+    if (!$result) {
+      die('削除に失敗しました。'.mysql_error());
+    }
   }
 
   //表示するデータを作成
@@ -107,8 +118,9 @@
       <?= $tempHtml ?>
     </table>
 
-//部屋・家具をここに渡せるようにする
+<!-- 部屋・家具をここに渡せるようにする -->
     <hr>
+
     <form action="cgi-bin/formmail.cgi" method="post">
       <p>部屋名：<br>
       <select id="roomSelect">
@@ -117,10 +129,28 @@
 
 
     <hr>
-    <form method="post" action="">
-    
-    <button type="submit" name="button1" value="ダミー文字列">追加</button>
+<!-- 追加ボタン -->
+    <h3>データの追加</h3>
+    <form method="get" action="insert.php">
+      <p>id</p> <input type = "text" name ="id-insert">
+      <p>摩擦</p> <input type = "text" name ="friction-insert">
+      <p>反発</p> <input type = "text" name ="restitution-insert">
+      <p>名前</p> <input type = "text" name ="name-insert">
+      <button type="submit" name="insertButton" value="追加">追加</button>
     </form>
+
+    <hr>
+
+<!-- 削除ボタン -->
+    <p>削除する○○：<br>
+      <select id="roomSelect">
+      </select>
+    </p>
+    <p>削除するテーブルのID</p>
+      <input type = "text" name ="comment2/"><br/>
+      <button type="submit" name="button2" value="削除">削除</button>
+    </form>
+
     <hr>
 
     <h3>boxテーブル</h3>

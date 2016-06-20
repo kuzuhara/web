@@ -1,1 +1,0 @@
-var test=JSON.parse('<?json_encode($jsonTest);?>');
