@@ -8,6 +8,7 @@
   $i;
   $fullname="";
 
+
   function quote_smart($value)
   {
     // 数値以外をクオートする
@@ -17,6 +18,7 @@
     return $value;
   }
 
+
   function delete($id){
 //    $sql = sprintf("DELETE FROM furniture WHERE id = %s", quote_smart($id));
     $sql = sprintf("DELETE FROM furniture WHERE id = %s", $id);
@@ -25,6 +27,7 @@
       die('削除に失敗しました。'.mysql_error());
     }
   }
+
 
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
 
@@ -46,12 +49,12 @@
   $g = $_GET['restitution-delete'];
   $h = $_GET['name-delete'];
 
-echo $e;
-echo $f;
-echo $g;
-echo $h;
+  echo $e;
+  echo $f;
+  echo $g;
+  echo $h;
 
-delete($e);
+  delete($e);
 
   //表示するデータを作成
   if($rows){

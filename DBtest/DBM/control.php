@@ -9,11 +9,11 @@
   $fullname="";
 
 
-
 //  $test=[];
 //  $test[0]="aaa";
 //  $test[1]="bbb";
 //  $jsonTest=json_encode($test);
+
   // MySQLへ接続する
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
 
@@ -30,28 +30,28 @@
   $rows = mysql_num_rows($result);
   $rows2 = mysql_num_rows($result2);
 
+
   function insert($id, $name, $friction, $restitution){
-    //$www=$id +","+ $name + "," + $friction +"," + $restitution;
     $sql=sprintf("INSERT INTO furniture (id, name, friction, restitution) VALUES (%d,'%s',%f,%f)",$id,$name,$friction,$restitution);
     print($sql);
-    //$sql = $www;
     $result_flag = mysql_query($sql);
     if (!$result_flag) {
       die('INSERTクエリーが失敗しました。'.mysql_error());
     }
   }
   //insert(1,'タンス', 0.1, 0.8);
-  function quote_smart($value)
-  {
+
+
+  function quote_smart($value){
     // 数値以外をクオートする
-    if (!is_numeric($value)) {
-        $value = '"' . mysql_real_escape_string($value) . '"';
+    if(!is_numeric($value)) {
+      $value = '"' . mysql_real_escape_string($value) . '"';
     }
     return $value;
   }
 
+
   function delete($id){
-    //$sql = sprintf("DELETE FROM furniture WHERE id = %s", quote_smart($id));
     $sql = sprintf("DELETE FROM furniture WHERE id = %s", $id);
     print($sql);
     $result_flag = mysql_query($sql);
@@ -60,6 +60,10 @@
     }
   }
   //delete(0,'タンス', 0.1, 0.8);
+
+  function dummy(){
+    echo "aaaa";
+  }
 
   //表示するデータを作成
   if($rows){
@@ -84,6 +88,7 @@
   }else{
     $msg = "データがありません。";
   }
+
   if($rows2){
     while($row2 = mysql_fetch_array($result2)) {
       $tempHtml2 .= "<tr>";
@@ -104,6 +109,7 @@
   echo $fullname;
 ?>
 
+
 <html>
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=SHIFT-JIS">
@@ -120,10 +126,9 @@
 <!-- 部屋・家具をここに渡せるようにする -->
     <hr>
 
-<!-- 追加 -->
     <h3>データの追加</h3>
     <form method="get" action="insert.php">
-      <p>ID  <input type = "text" name ="id-insert"></p>
+      <p>ID   <input type = "text" name ="id-insert"></p>
       <p>摩擦 <input type = "text" name ="friction-insert"></p>
       <p>反発 <input type = "text" name ="restitution-insert"></p>
       <p>名前 <input type = "text" name ="name-insert"></p>
@@ -132,26 +137,30 @@
 
     <hr>
 
+    <h3>データの削除</h3>
 
-<!-- 変更・削除 -->
-    <h3>データの変更・削除</h3>
     <form method="get" action="delete.php">
-<!--    <form method="post" action="cgi-bin/formmail.cgi"> -->
-      <p>furniture ID：<br>
-        <select id="roomSelect"></select>
-      </p>
-    
-      <p>ID  <input type = "text" name ="id-delete"></p>
+<!--    <iframe name="f1" width=0 height=0 style="visibility:hidden"></iframe> -->
+<!-- 今はnameを表示になっている -->
+      <p>家具ID：<select id="roomSelect" onChange="this.form.submit()"></select></p>
+
+      <p>ID   <input type = "text" name ="id-delete"></p>
       <p>摩擦 <input type = "text" name ="friction-delete"></p>
       <p>反発 <input type = "text" name ="restitution-delete"></p>
       <p>名前 <input type = "text" name ="name-delete"></p>
-
-      <button type="submit" name="appdateButton" value="変更">変更</button>
       <button type="submit" name="deleteButton" value="削除">削除</button>
     </form>
 
+<!--
+    <h3>データの変更</h3>
+    <form method="get" action="update.php">
+      <p>ID   <input type = "text" name ="id-update"></p>
+      <p>摩擦 <input type = "text" name ="friction-update"></p>
+      <p>反発 <input type = "text" name ="restitution-update"></p>
+      <p>名前 <input type = "text" name ="name-update"></p>
+      <button type="submit" name="updateButton" value="変更">変更</button>
+-->
     <hr>
-
     <h3>boxテーブル</h3>
     <?= $msg2 ?>
     <table width = "200" border = "0">
@@ -160,23 +169,20 @@
     </table>
 
 
+    <script type="text/javascript">var rows = "<?= $rows ?>";</script>
+    <script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>
+    <script type="text/javascript">
+    //	var name = JSON.parse('<?php echo  $jsonName; ?>');
+    </script>
 
+<!--    <script type><>  -->
 
-<script type="text/javascript">var rows = "<?= $rows ?>";</script>
-<script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>
-<script type="text/javascript">
-//	var name = JSON.parse('<?php echo  $jsonName; ?>');
-</script>
-<script type="text/javascript">
-	var test=[];
-    test[0] = "efg";
-    test[1] = "def";
-	var fullname="<?php echo $fullname ?>";
-</script>
-<script type="text/javascript" src="script.js"></script>
-
-
+    <script type="text/javascript">
+      var test=[];
+      test[0] = "efg";
+      test[1] = "def";
+	  var fullname="<?php echo $fullname ?>";
+    </script>
+    <script type="text/javascript" src="script.js"></script>
   </body>
 </html>
-
-

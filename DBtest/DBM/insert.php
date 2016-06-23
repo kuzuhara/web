@@ -8,6 +8,7 @@
   $i;
   $fullname="";
 
+
   function insert($id, $name, $friction, $restitution){
     //$www=$id +","+ $name + "," + $friction +"," + $restitution;
     $sql=sprintf("INSERT INTO furniture (id, name, friction, restitution) VALUES (%d,'%s',%f,%f)",$id,$name,$friction,$restitution);
@@ -19,6 +20,7 @@
     }
   }
 
+
   function quote_smart($value)
   {
     // 数値以外をクオートする
@@ -28,8 +30,7 @@
     return $value;
   }
 
-//////////////////////////////////////////////////////////
-
+/*
   function delete($id){
 //    $sql = sprintf("DELETE FROM furniture WHERE id = %s", quote_smart($id));
     $sql = sprintf("DELETE FROM furniture WHERE id = %s", $id);
@@ -38,6 +39,7 @@
       die('削除に失敗しました。'.mysql_error());
     }
   }
+*/
 
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
 
@@ -60,24 +62,26 @@
   $c = $_GET['restitution-insert'];
   $d = $_GET['name-insert'];
 
-echo $a;
-echo $b;
-echo $c;
-echo $d;
+  echo $a;
+  echo $b;
+  echo $c;
+  echo $d;
 
-insert($a,$d,$b,$c);
+  insert($a,$d,$b,$c);
 
+/*
   $e = $_GET['id-change'];
   $f = $_GET['friction-change'];
   $g = $_GET['restitution-change'];
   $h = $_GET['name-change'];
 
-echo $e;
-echo $f;
-echo $g;
-echo $h;
+  echo $e;
+  echo $f;
+  echo $g;
+  echo $h;
 
-delete($e);
+  delete($e);
+*/
 
   //表示するデータを作成
   if($rows){
@@ -121,5 +125,6 @@ delete($e);
   mysql_close($link) or die("MySQL切断に失敗しました。");
 //  echo $fullname;
 
+echo "<a href='control.php'>戻る</a>";
 
 ?>
