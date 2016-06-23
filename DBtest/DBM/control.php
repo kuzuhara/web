@@ -40,9 +40,7 @@
       die('INSERTクエリーが失敗しました。'.mysql_error());
     }
   }
-
   //insert(1,'タンス', 0.1, 0.8);
-
   function quote_smart($value)
   {
     // 数値以外をクオートする
@@ -52,15 +50,16 @@
     return $value;
   }
 
-////////////////////////////////////////////////////////////////////
   function delete($id){
-    $sql = sprintf("DELETE FROM furniture WHERE id = %s"
-         , quote_smart($id));
+    //$sql = sprintf("DELETE FROM furniture WHERE id = %s", quote_smart($id));
+    $sql = sprintf("DELETE FROM furniture WHERE id = %s", $id);
+    print($sql);
     $result_flag = mysql_query($sql);
     if (!$result) {
       die('削除に失敗しました。'.mysql_error());
     }
   }
+  //delete(0,'タンス', 0.1, 0.8);
 
   //表示するデータを作成
   if($rows){
@@ -121,34 +120,34 @@
 <!-- 部屋・家具をここに渡せるようにする -->
     <hr>
 
-    <form action="cgi-bin/formmail.cgi" method="post">
-      <p>部屋名：<br>
-      <select id="roomSelect">
-      </select></p>
-    </form>
-
-
-    <hr>
-<!-- 追加ボタン -->
+<!-- 追加 -->
     <h3>データの追加</h3>
     <form method="get" action="insert.php">
-      <p>id</p> <input type = "text" name ="id-insert">
-      <p>摩擦</p> <input type = "text" name ="friction-insert">
-      <p>反発</p> <input type = "text" name ="restitution-insert">
-      <p>名前</p> <input type = "text" name ="name-insert">
+      <p>ID  <input type = "text" name ="id-insert"></p>
+      <p>摩擦 <input type = "text" name ="friction-insert"></p>
+      <p>反発 <input type = "text" name ="restitution-insert"></p>
+      <p>名前 <input type = "text" name ="name-insert"></p>
       <button type="submit" name="insertButton" value="追加">追加</button>
     </form>
 
     <hr>
 
-<!-- 削除ボタン -->
-    <p>削除する○○：<br>
-      <select id="roomSelect">
-      </select>
-    </p>
-    <p>削除するテーブルのID</p>
-      <input type = "text" name ="comment2/"><br/>
-      <button type="submit" name="button2" value="削除">削除</button>
+
+<!-- 変更・削除 -->
+    <h3>データの変更・削除</h3>
+    <form method="get" action="delete.php">
+<!--    <form method="post" action="cgi-bin/formmail.cgi"> -->
+      <p>furniture ID：<br>
+        <select id="roomSelect"></select>
+      </p>
+    
+      <p>ID  <input type = "text" name ="id-delete"></p>
+      <p>摩擦 <input type = "text" name ="friction-delete"></p>
+      <p>反発 <input type = "text" name ="restitution-delete"></p>
+      <p>名前 <input type = "text" name ="name-delete"></p>
+
+      <button type="submit" name="appdateButton" value="変更">変更</button>
+      <button type="submit" name="deleteButton" value="削除">削除</button>
     </form>
 
     <hr>

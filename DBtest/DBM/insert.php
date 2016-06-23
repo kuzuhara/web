@@ -29,11 +29,12 @@
   }
 
 //////////////////////////////////////////////////////////
+
   function delete($id){
-    $sql = sprintf("DELETE FROM furniture WHERE id = %s"
-         , quote_smart($id));
+//    $sql = sprintf("DELETE FROM furniture WHERE id = %s", quote_smart($id));
+    $sql = sprintf("DELETE FROM furniture WHERE id = %s", $id);
     $result_flag = mysql_query($sql);
-    if (!$result) {
+    if (!$result_flag) {
       die('削除に失敗しました。'.mysql_error());
     }
   }
@@ -65,6 +66,18 @@ echo $c;
 echo $d;
 
 insert($a,$d,$b,$c);
+
+  $e = $_GET['id-change'];
+  $f = $_GET['friction-change'];
+  $g = $_GET['restitution-change'];
+  $h = $_GET['name-change'];
+
+echo $e;
+echo $f;
+echo $g;
+echo $h;
+
+delete($e);
 
   //表示するデータを作成
   if($rows){
