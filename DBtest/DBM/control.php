@@ -7,6 +7,7 @@
   $restitution;
   $i;
   $fullname="";
+  $selectId;
 
 
 //  $test=[];
@@ -75,12 +76,14 @@
 //      $name[$i]=(string)$row["name"];
 //      echo $name[$i];
 //      $fullname+=$row["name"]+",";
+      $selectId[$i]=$row["id"];
       $fullname=sprintf("%s%s,", $fullname, $row["name"]);
       $friction[$i]=$row["friction"];
       $restitution[$i]=$row["restitution"];
       $i++;
     }
 //    $jsonName=json_encode($name);
+    $jsonSelectId=json_encode($selectId);
     $jsonFriction=json_encode($friction);
     $jsonRestitution=json_encode($restitution);
     $msg = $rows."件のデータがあります。";
@@ -140,6 +143,8 @@
     <h3>データの削除</h3>
 
     <form method="get" action="delete.php">
+<!-- /*    <form method="get" action="showInformation.php"> 成功済み*/ -->
+
 <!--    <iframe name="f1" width=0 height=0 style="visibility:hidden"></iframe> -->
 <!-- 今はnameを表示になっている -->
       <p>家具ID：<select id="roomSelect" onChange="this.form.submit()"></select></p>
@@ -170,12 +175,11 @@
 
 
     <script type="text/javascript">var rows = "<?= $rows ?>";</script>
+    <script type="text/javascript">var selectId = JSON.parse('<?php echo  $jsonSelectId; ?>');</script>
     <script type="text/javascript">var restitution = JSON.parse('<?php echo  $jsonRestitution; ?>');</script>
     <script type="text/javascript">
     //	var name = JSON.parse('<?php echo  $jsonName; ?>');
     </script>
-
-<!--    <script type><>  -->
 
     <script type="text/javascript">
       var test=[];

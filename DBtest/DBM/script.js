@@ -2,6 +2,10 @@ for (var i=0;i<restitution.length;i++){
 	console.log(restitution[i]);
 	console.log(test[i]);
 }
+for (var i=0;i<selectId.length;i++){
+	console.log(selectId[i]);
+	console.log(test[i]);
+}
 console.log(fullname);
 
 //var aaa=fullname.split(",");
@@ -20,7 +24,7 @@ var select = document.getElementById('roomSelect');
 var selectBox = [];
 
 for (var i=0;i<aaa.length-1;i++){
-    selectBox[i]= aaa[i];
+    selectBox[i]= selectId[i];
 }
 
 for ( var i in selectBox ) {
