@@ -62,6 +62,16 @@
   }
   //delete(0,'タンス', 0.1, 0.8);
 
+function update($id, $name, $friction, $restitution){
+    $sql=sprintf("UPDATE furniture SET (id, name, friction, restitution) VALUES (%d,'%s',%f,%f)",$id,$name,$friction,$restitution);
+    print($sql);
+    $result_flag = mysql_query($sql);
+    if (!$result_flag) {
+      die('UPDATEクエリーが失敗しました。'.mysql_error());
+    }
+  }
+
+
   function dummy(){
     echo "aaaa";
   }
@@ -141,30 +151,23 @@
     <hr>
 
     <h3>データの削除</h3>
-
-    <form method="get" action="delete.php">
-<!-- /*    <form method="get" action="showInformation.php"> 成功済み*/ -->
-
-<!--    <iframe name="f1" width=0 height=0 style="visibility:hidden"></iframe> -->
-<!-- 今はnameを表示になっている -->
-      <p>家具ID：<select id="roomSelect" onChange="this.form.submit()"></select></p>
-
+    <form method="post" action="delete.php">
+      <p>削除する家具ID：<select id="roomSelect" name="roomId" value="1020" onChange="this.form.submit()"></select></p>
       <p>ID   <input type = "text" name ="id-delete"></p>
-      <p>摩擦 <input type = "text" name ="friction-delete"></p>
-      <p>反発 <input type = "text" name ="restitution-delete"></p>
-      <p>名前 <input type = "text" name ="name-delete"></p>
       <button type="submit" name="deleteButton" value="削除">削除</button>
     </form>
 
-<!--
-    <h3>データの変更</h3>
-    <form method="get" action="update.php">
+    <hr>
+
+    <h3>データの更新</h3>
+    <form method="get" action="update2.php">
       <p>ID   <input type = "text" name ="id-update"></p>
       <p>摩擦 <input type = "text" name ="friction-update"></p>
       <p>反発 <input type = "text" name ="restitution-update"></p>
       <p>名前 <input type = "text" name ="name-update"></p>
-      <button type="submit" name="updateButton" value="変更">変更</button>
--->
+      <button type="submit" name="updateButton" value="更新">更新</button>
+    </form>
+
     <hr>
     <h3>boxテーブル</h3>
     <?= $msg2 ?>

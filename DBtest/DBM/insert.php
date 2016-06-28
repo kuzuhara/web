@@ -21,16 +21,6 @@
   }
 
 
-  function quote_smart($value)
-  {
-    // 数値以外をクオートする
-    if (!is_numeric($value)) {
-        $value = '"' . mysql_real_escape_string($value) . '"';
-    }
-    return $value;
-  }
-
-
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
 
   // データベースを選択する
@@ -105,3 +95,23 @@
 echo "<a href='control.php'>戻る</a>";
 
 ?>
+
+<html>
+  <head>
+    <h3>furnitureテーブル</h3>
+    <?= $msg ?>
+    <table width = "200" border = "0">
+      <tr bgcolor="##ccffcc"><td>id</td><td>摩擦</td><td>反発</td><td>name</td></tr>
+      <?= $tempHtml ?>
+    </table>
+
+    <hr>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=SHIFT-JIS">
+    <title>追加表示</title>
+  </head>
+  <body>
+    <p><?php echo 'ID : ', $a , ' name : ' , $d,' 摩擦 : ',$b ,' 反発 : ', $c ; ?></p>
+ <br>
+ <a href='control.php'>戻る</a>
+  </body>

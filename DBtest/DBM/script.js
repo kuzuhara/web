@@ -6,6 +6,7 @@ for (var i=0;i<selectId.length;i++){
 	console.log(selectId[i]);
 	console.log(test[i]);
 }
+
 console.log(fullname);
 
 //var aaa=fullname.split(",");

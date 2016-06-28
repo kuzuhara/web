@@ -23,10 +23,15 @@
 //    $sql = sprintf("DELETE FROM furniture WHERE id = %s", quote_smart($id));
     $sql = sprintf("DELETE FROM furniture WHERE id = %s", $id);
     $result_flag = mysql_query($sql);
+
     if (!$result_flag) {
       die('削除に失敗しました。'.mysql_error());
+      echo "<a href='control.php'>戻る</a>";
+
     }
   }
+
+
 
 
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
@@ -44,17 +49,15 @@
   $rows = mysql_num_rows($result);
   $rows2 = mysql_num_rows($result2);
 
-  $e = $_GET['id-delete'];
-  $f = $_GET['friction-delete'];
-  $g = $_GET['restitution-delete'];
-  $h = $_GET['name-delete'];
+//  $e = $_GET['id-delete'];
+  //$e = $_GET['roomId'].text;
 
-  echo $e;
-  echo $f;
-  echo $g;
-  echo $h;
+  $select = $_POST["roomId"];
+  echo $select;
 
-  delete($e);
+
+  //delete($e);
+
 
   //表示するデータを作成
   if($rows){
@@ -90,6 +93,7 @@
     $msg2 = "データがありません。";
   }
 
+
   //結果保持用メモリを開放する
   mysql_free_result($result);
   mysql_free_result($result2);
@@ -100,3 +104,27 @@
 
 
 ?>
+
+<html>
+  <head>
+    <h3>furnitureテーブル</h3>
+    <?= $msg ?>
+    <table width = "200" border = "0">
+      <tr bgcolor="##ccffcc"><td>id</td><td>摩擦</td><td>反発</td><td>name</td></tr>
+      <?= $tempHtml ?>
+    </table>
+
+    <hr>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=SHIFT-JIS">
+    <title>削除表示</title>
+  </head>
+  <body>
+    <p><?
+php //echo 'ID : ', $e , ' name : ' , $h,' 摩擦 : ',$f ,' 反発 : ', $g ; 
+?></p>
+ <br>
+ <a href='control.php'>戻る</a>
+  </body>
+
+
