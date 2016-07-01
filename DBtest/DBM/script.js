@@ -28,9 +28,13 @@ for (var i=0;i<aaa.length-1;i++){
     selectBox[i]= selectId[i];
 }
 
+//  http://isthmis.me/Blog/javascript-selectbox/
 for ( var i in selectBox ) {
     var option = document.createElement('option');
-    option.setAttribute('value', i);
-    option.innerHTML = selectBox[i];
+    option.setAttribute('value', selectId[i]); //€–Ú‚Ì’l
+    selectBox[i].value=selectId[i];
+    selectBox[i].text=selectId[i];
+//    option.setAttribute('', i);
+    option.innerHTML = selectBox[i]; //•\Ž¦‚·‚é•¶Žš‚ðŒˆ‚ß‚Ä‚¢‚é
     select.appendChild(option);
 }

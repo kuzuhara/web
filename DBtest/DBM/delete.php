@@ -50,13 +50,13 @@
   $rows2 = mysql_num_rows($result2);
 
 //  $e = $_GET['id-delete'];
-  //$e = $_GET['roomId'].text;
 
-  $select = $_POST["roomId"];
-  echo $select;
+  $e = $_POST['roomId']; //番目
+  echo $e;             //番目の数字を判断
+ // $select = $_POST["roomId.value"];
+ // echo $select;
 
-
-  //delete($e);
+  delete($e);
 
 
   //表示するデータを作成

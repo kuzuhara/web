@@ -1,0 +1,21 @@
+#a-box{
+    float: left;
+    padding: 20px;
+}
+#b-box {
+    float: left;
+    width: 250px;
+    padding: 20px;
+
+}
+
+#c-box {
+    float: left;
+    width: 250px;
+    padding: 20px;
+}
+
+#d-box {
+    width: 250px;
+    padding: 20px;
+}
