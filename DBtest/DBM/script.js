@@ -38,3 +38,17 @@ for ( var i in selectBox ) {
     option.innerHTML = selectBox[i]; //•\Ž¦‚·‚é•¶Žš‚ðŒˆ‚ß‚Ä‚¢‚é
     select.appendChild(option);
 }
+
+
+var select = document.getElementById('roomCheck');
+
+var selectBox = [];
+
+for (var i=0;i<aaa.length-1;i++){
+    selectBox[i]= selectId[i];
+}
+
+//  http://isthmis.me/Blog/javascript-selectbox/
+for ( var i in selectBox ) {
+    document.insert.checktest.value +=selectId[i]+",";
+}

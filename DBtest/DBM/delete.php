@@ -51,10 +51,8 @@
 
 //  $e = $_GET['id-delete'];
 
-  $e = $_POST['roomId']; //番目
-  echo $e;             //番目の数字を判断
- // $select = $_POST["roomId.value"];
- // echo $select;
+  $e = $_POST['roomId']; 
+  echo $e;
 
   delete($e);
 
@@ -116,7 +114,7 @@
 
     <hr>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=SHIFT-JIS">
+    <meta http-equiv="Content-Type" content="text/html"; charset="SHIFT-JIS" >
     <title>削除表示</title>
   </head>
   <body>

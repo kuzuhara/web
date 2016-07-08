@@ -1,21 +1,51 @@
 #a-box{
     float: left;
-    padding: 20px;
+    width: 220px;
+    height: 200px;
+    margin : 3px ;
+    padding: 5px;
+//    background-color: rgba(255,0,0,0.5);
+    border-style: none dotted none dotted;
 }
 #b-box {
     float: left;
-    width: 250px;
-    padding: 20px;
+    width: 220px;
+    height: 200px;
+    margin : 3px ;
+    padding: 5px;
+    background-color: rgba(0,255,0,0.5);
 
 }
 
 #c-box {
     float: left;
-    width: 250px;
-    padding: 20px;
+    width: 220px;
+    height: 200px;
+    margin : 3px ;
+    padding: 5px;
+//    background-color: rgba(0,0,255,0.5);
+    border-style: none dotted none dotted;
 }
 
-#d-box {
-    width: 250px;
-    padding: 20px;
+#box-box {
+    width: 600px;
+    height: 200px;
+    margin : 3px ;
+    padding: 5px;
+    background-color: rgba(200,120,20,0.5);
+}
+
+.boxTable{
+//    table-layout: fixed;
+}
+
+.boxTable td, th {
+    padding: 2px 10px;
+    white-space: nowrap;
+}
+
+furniture-box{
+//    margin : 3px ;
+//    padding: 5px;
+ÅÉinput type="table" value="" style="text-align: right; "/ÅÑ
 }

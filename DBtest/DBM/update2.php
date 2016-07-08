@@ -88,7 +88,7 @@ echo "<a href='control.php'>戻る</a>";
 <html>
 <head>
 <title>UPDATE</title>
-<meta http-equiv="Content-Type" content="text/html; charset=SHIFT-JIS">
+<meta http-equiv="Content-Type" content="text/html"; charset="SHIFT-JIS" >
 </head>
 
 <body>

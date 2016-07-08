@@ -21,6 +21,8 @@
   }
 
 
+
+
   $link = mysql_connect($url,$user,$pass) or die("MySQLへの接続に失敗しました。");
 
   // データベースを選択する
@@ -37,25 +39,47 @@
   $rows2 = mysql_num_rows($result2);
 
 //insert(1,'タンス', 0.1, 0.8);
-  $a = $_GET['id-insert'];
-  $b = $_GET['friction-insert'];
-  $c = $_GET['restitution-insert'];
-  $d = $_GET['name-insert'];
+  $a = $_GET['id-insert']+"<br />";
+  $b = $_GET['name-insert']+"<br />";
+  $c = $_GET['friction-insert']+"<br />";
+  $d = $_GET['restitution-insert']+"<br />";
+
+
+  $g = $_GET['checktest'];
+
+  $sample=explode(',',$g);
+  $count = count($sample)-1;
 
   echo $a;
+  echo "<br>";
   echo $b;
+  echo "<br>";
   echo $c;
+  echo "<br>";
   echo $d;
+  echo "<br>";
+  echo $g;
 
-  insert($a,$d,$b,$c);
+$found = 0;
 
+for ($i=0;$i<$count;$i++){
+  echo "<br>";
+  echo $sample[$i];
+  if($sample[$i] == $a){
+    $found = 1;
+  }
+}
+
+if($found == 0){
+  insert($a,$b,$c,$d);
+}
 
   //表示するデータを作成
   if($rows){
     $i=0;
     while($row = mysql_fetch_array($result)) {
       $tempHtml .= "<tr>";
-      $tempHtml .= "<td>".$row["id"]."</td><td>".$row["friction"]."</td><td>".$row["restitution"]."</td><td>".$row["name"]."</td>";
+      $tempHtml .= "<td>".$row["id"]."</td><td>".$row["name"]."</td><td>".$row["friction"]."</td><td>".$row["restitution"]."</td>";
       $tempHtml .= "</tr>\n";
 //      $name[$i]=(string)$row["name"];
 //      echo $name[$i];
@@ -99,19 +123,20 @@ echo "<a href='control.php'>戻る</a>";
 <html>
   <head>
     <h3>furnitureテーブル</h3>
+    <meta http-equiv="Content-Type" content="text/html" charset="SHIFT-JIS"; >
+    <title>追加表示</title>
+  </head>
+  <body>
+
     <?= $msg ?>
     <table width = "200" border = "0">
-      <tr bgcolor="##ccffcc"><td>id</td><td>摩擦</td><td>反発</td><td>name</td></tr>
+      <tr bgcolor="##ccffcc"><td>id</td><td>name</td><td>摩擦</td><td>反発</td></tr>
       <?= $tempHtml ?>
     </table>
 
     <hr>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=SHIFT-JIS">
-    <title>追加表示</title>
-  </head>
-  <body>
-    <p><?php echo 'ID : ', $a , ' name : ' , $d,' 摩擦 : ',$b ,' 反発 : ', $c ; ?></p>
+    <p><?php echo 'ID : ', $a , ' name : ' , $b,' 摩擦 : ',$c ,' 反発 : ', $d ; ?></p>
  <br>
  <a href='control.php'>戻る</a>
   </body>
