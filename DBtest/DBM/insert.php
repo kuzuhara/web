@@ -39,10 +39,10 @@
   $rows2 = mysql_num_rows($result2);
 
 //insert(1,'ƒ^ƒ“ƒX', 0.1, 0.8);
-  $a = $_GET['id-insert']+"<br />";
-  $b = $_GET['name-insert']+"<br />";
-  $c = $_GET['friction-insert']+"<br />";
-  $d = $_GET['restitution-insert']+"<br />";
+  $a = $_GET['id-insert'];
+  $b = $_GET['name-insert'];
+  $c = $_GET['friction-insert'];
+  $d = $_GET['restitution-insert'];
 
 
   $g = $_GET['checktest'];
@@ -51,11 +51,11 @@
   $count = count($sample)-1;
 
   echo $a;
-  echo "<br>";
+
   echo $b;
-  echo "<br>";
+
   echo $c;
-  echo "<br>";
+
   echo $d;
   echo "<br>";
   echo $g;
