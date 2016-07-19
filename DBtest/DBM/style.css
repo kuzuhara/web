@@ -28,11 +28,10 @@
 }
 
 #box-box {
-    width: 800px;
-    height: 200px;
+    width: 850px;
     margin : 3px ;
     padding: 5px;
-    background-color: rgba(200,120,20,0.5);
+    background-color: rgba(220,100,100,0.5);
 }
 
 .boxTable{

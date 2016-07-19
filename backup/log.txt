@@ -1,0 +1,5 @@
+160719 
+
+http://threejs.org/examples/
+サンプル テクスチャ失敗と　法線成功　
+

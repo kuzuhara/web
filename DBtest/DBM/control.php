@@ -26,11 +26,13 @@
   $result = mysql_query($sql, $link) or die("クエリの送信に失敗しました。<br />SQL:".$sql);
   $sql2 = "SELECT * FROM box";
   $result2 = mysql_query($sql2, $link) or die("クエリの送信に失敗しました。<br />SQL:".$sql2);
+  $sql3 = "SELECT * FROM cylinder";
+  $result3 = mysql_query($sql3, $link) or die("クエリの送信に失敗しました。<br />SQL:".$sql3);
 
   //結果セットの行数を取得する
   $rows = mysql_num_rows($result);
   $rows2 = mysql_num_rows($result2);
-
+  $rows3 = mysql_num_rows($result3);
 
   function insert($id, $name, $friction, $restitution){
     $sql=sprintf("INSERT INTO furniture (id, name, friction, restitution) VALUES (%d,'%s',%f,%f)",$id,$name,$friction,$restitution);
@@ -105,7 +107,7 @@ function update($id, $name, $friction, $restitution){
   if($rows2){
     while($row2 = mysql_fetch_array($result2)) {
       $tempHtml2 .= "<tr>";
-      $tempHtml2 .= "<td>".$row2["wX"]."</td><td>".$row2["wY"]."</td><td>".$row2["wZ"]."</td><td>".$row2["x"]."</td><td>".$row2["y"]."</td><td>".$row2["z"]."</td><td>".$row2["rX"]."</td><td>".$row2["rY"]."</td><td>".$row2["rZ"]."</td><td>".$row2["mass"]."</td><td>".$row2["density"]."</td><td>".$row["useMass"]."</td><td>".$row2["color"]."</td><td>".$row2["texture"]."</td><td>".$row2["useTexture"]."</td>";
+      $tempHtml2 .= "<td>".$row2["id"]."</td><td>".$row2["wX"]."</td><td>".$row2["wY"]."</td><td>".$row2["wZ"]."</td><td>".$row2["x"]."</td><td>".$row2["y"]."</td><td>".$row2["z"]."</td><td>".$row2["rX"]."</td><td>".$row2["rY"]."</td><td>".$row2["rZ"]."</td><td>".$row2["mass"]."</td><td>".$row2["density"]."</td><td>".$row2["useMass"]."</td><td>".$row2["color"]."</td><td>".$row2["texture"]."</td><td>".$row2["useTexture"]."</td>";
       $tempHtml2 .= "</tr>\n";
     }
     $msg2 = $rows2."件のデータがあります。";
@@ -113,9 +115,20 @@ function update($id, $name, $friction, $restitution){
     $msg2 = "データがありません。";
   }
 
+  if($rows3){
+    while($row3 = mysql_fetch_array($result3)) {
+      $tempHtml3 .= "<tr>";
+      $tempHtml3 .= "<td>".$row3["id"]."</td><td>".$row3["radius"]."</td><td>".$row3["height"]."</td><td>".$row3["x"]."</td><td>".$row3["y"]."</td><td>".$row3["z"]."</td><td>".$row3["rX"]."</td><td>".$row3["rY"]."</td><td>".$row3["rZ"]."</td><td>".$row3["mass"]."</td><td>".$row3["density"]."</td><td>".$row3["useMass"]."</td><td>".$row3["color"]."</td><td>".$row3["texture"]."</td><td>".$row3["useTexture"]."</td>";
+      $tempHtml3 .= "</tr>\n";
+    }
+    $msg3 = $rows3."件のデータがあります。";
+  }else{
+    $msg3 = "データがありません。";
+  }
   //結果保持用メモリを開放する
   mysql_free_result($result);
   mysql_free_result($result2);
+  mysql_free_result($result3);
 
   // MySQLへの接続を閉じる
   mysql_close($link) or die("MySQL切断に失敗しました。");
@@ -149,10 +162,10 @@ function update($id, $name, $friction, $restitution){
     <h3>データの追加</h3>
     <form name="insert" method="get" action="insert.php">
       <table>
-        <tr><td>ID</td><td><input type = "text" name ="id-insert"></td></tr>
+        <tr><td>ID</td><td><input type = "number" name ="id-insert"></td></tr>
         <tr><td>名前</td><td><input type = "text" name ="name-insert"></td></tr>
-        <tr><td>摩擦</td><td><input type = "text" name ="friction-insert"></td></tr>
-        <tr><td>反発</td><td><input type = "text" name ="restitution-insert"></td></tr>
+        <tr><td>摩擦</td><td><input type = "number" name ="friction-insert" max="1.00" min="0.01" step="0.01">  </td></tr>
+        <tr><td>反発</td><td><input type = "number" name ="restitution-insert" max="1.00" min="0.01" step="0.01">  </td></tr>
       </table>
 
         <input id="roomCheck" type = "text" name ="checktest">
@@ -178,16 +191,17 @@ function update($id, $name, $friction, $restitution){
     <h3>データの更新</h3>
     <form method="get" action="update2.php">
       <table>
-        <tr><td>ID</td><td><input type = "text" name ="id-update"></td></tr>
+        <tr><td>ID</td><td><input type = "number" name ="id-update"></td></tr>
         <tr><td>名前</td><td><input type = "text" name ="name-update"></td></tr>
-        <tr><td>摩擦</td><td><input type = "text" name ="friction-update"></td></tr>
-        <tr><td>反発</td><td><input type = "text" name ="restitution-update"></td></tr>
+        <tr><td>摩擦</td><td><input type = "number" name ="friction-update" max="1.00" min="0.01" step="0.01"></td></tr>
+        <tr><td>反発</td><td><input type = "number" name ="restitution-update" max="1.00" min="0.01" step="0.01"></td></tr>
       </table>
       <button type="submit" name="updateButton" value="更新">更新</button>
     </form>
     </div>
 
     <br>
+
     <p style="clear:left;">
     <hr>
     <div id="box-box">
@@ -217,7 +231,33 @@ function update($id, $name, $friction, $restitution){
     </div>
     </p>
 
-
+    <p style="clear:left;">
+    <hr>
+    <div id="box-box">
+    <h3>cylinderテーブル</h3>
+    <?= $msg3 ?>
+    <table class="boxTable" width = "200" border = "0">
+      <tr bgcolor="##ccffff">
+        <th>ID</th>
+        <th>radius</th>
+        <th>height</th>
+        <th>x</th>
+        <th>y</th>
+        <th>z</th>
+        <th>rX</th>
+        <th>rY</th>
+        <th>rZ</th>
+        <th>質量</th>
+        <th>比重</th>
+        <th>useMass</th>
+        <th>色</th>
+        <th>テクスチャ</th>
+        <th>useTexture</th>
+      </tr>
+      <?= $tempHtml3 ?>
+    </table>
+    </div>
+    </p>
 
     <script type="text/javascript">var rows = "<?= $rows ?>";</script>
     <script type="text/javascript">var selectId = JSON.parse('<?php echo  $jsonSelectId; ?>');</script>
