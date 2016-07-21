@@ -22,11 +22,11 @@
   $sdb = mysql_select_db($db,$link) or die("データベースの選択に失敗しました。");
 
   // クエリを送信する
-  $sql = "SELECT * FROM furniture";
+  $sql = "SELECT * FROM _furniture";
   $result = mysql_query($sql, $link) or die("クエリの送信に失敗しました。<br />SQL:".$sql);
-  $sql2 = "SELECT * FROM box";
+  $sql2 = "SELECT * FROM _box";
   $result2 = mysql_query($sql2, $link) or die("クエリの送信に失敗しました。<br />SQL:".$sql2);
-  $sql3 = "SELECT * FROM cylinder";
+  $sql3 = "SELECT * FROM _cylinder";
   $result3 = mysql_query($sql3, $link) or die("クエリの送信に失敗しました。<br />SQL:".$sql3);
 
   //結果セットの行数を取得する
@@ -162,13 +162,13 @@ function update($id, $name, $friction, $restitution){
     <h3>データの追加</h3>
     <form name="insert" method="get" action="insert.php">
       <table>
-        <tr><td>ID</td><td><input type = "number" name ="id-insert"></td></tr>
+        <tr><td>ID</td><td><input type = "number" name ="id-insert" max="100" min="0" step="1"></td></tr>
         <tr><td>名前</td><td><input type = "text" name ="name-insert"></td></tr>
-        <tr><td>摩擦</td><td><input type = "number" name ="friction-insert" max="1.00" min="0.01" step="0.01">  </td></tr>
-        <tr><td>反発</td><td><input type = "number" name ="restitution-insert" max="1.00" min="0.01" step="0.01">  </td></tr>
+        <tr><td>摩擦</td><td><input type = "number" name ="friction-insert" max="1.00" min="0.00" step="0.01">  </td></tr>
+        <tr><td>反発</td><td><input type = "number" name ="restitution-insert" max="1.00" min="0.00" step="0.01">  </td></tr>
       </table>
 
-        <input id="roomCheck" type = "text" name ="checktest">
+        <input id="roomCheck" type = "hidden" name ="checktest">
 
 <!--      <p>チェック用家具ID：<select id="roomCheck" name="roomCheck"></select></p> -->
 
@@ -191,10 +191,10 @@ function update($id, $name, $friction, $restitution){
     <h3>データの更新</h3>
     <form method="get" action="update2.php">
       <table>
-        <tr><td>ID</td><td><input type = "number" name ="id-update"></td></tr>
+        <tr><td>ID</td><td><input type = "number" name ="id-update" max="100" min="0" step="1"></td></tr>
         <tr><td>名前</td><td><input type = "text" name ="name-update"></td></tr>
-        <tr><td>摩擦</td><td><input type = "number" name ="friction-update" max="1.00" min="0.01" step="0.01"></td></tr>
-        <tr><td>反発</td><td><input type = "number" name ="restitution-update" max="1.00" min="0.01" step="0.01"></td></tr>
+        <tr><td>摩擦</td><td><input type = "number" name ="friction-update" max="1.00" min="0.00" step="0.01"></td></tr>
+        <tr><td>反発</td><td><input type = "number" name ="restitution-update" max="1.00" min="0.00" step="0.01"></td></tr>
       </table>
       <button type="submit" name="updateButton" value="更新">更新</button>
     </form>
